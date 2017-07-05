@@ -48,6 +48,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </li>
             <li><a href="<?php echo base_url('contact'); ?>">contact/sav</a>
             </li>
+            <li><a href="<?php echo base_url(); ?>">nouveautés</a>
+            </li>
           </ul>
         </div>
         <!--/.nav-collapse -->

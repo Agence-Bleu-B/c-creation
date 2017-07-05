@@ -30,10 +30,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span class="sr-only">Toggle navigation</span>
             <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
           </button>
-          <a class="navbar-brand bsbrand hidden-sm hidden-xs" href="<?php echo base_url(); ?>">
+          <a class="navbar-brand bsbrand hidden-xs" href="<?php echo base_url(); ?>">
             <p class="logotop" ></p> 
           </a>
-          <a class="navbar-brand smbrand hidden-md hidden-lg" href="<?php echo base_url(); ?>"><p>
+          <a class="navbar-brand smbrand hidden-sm hidden-md hidden-lg" href="<?php echo base_url(); ?>"><p>
             <img src="<?php echo img_url('logos/logo.png'); ?>" class="img-responsive"/> </p>
           </a>
         </div>
@@ -46,6 +46,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li><a href="<?php echo base_url('presse'); ?>">revue de presse</a>
             </li>
             <li><a href="<?php echo base_url('contact'); ?>">contact/sav</a>
+            </li>
+            <li><a href="<?php echo base_url(); ?>">nouveautés</a>
             </li>
           </ul>
         </div>
