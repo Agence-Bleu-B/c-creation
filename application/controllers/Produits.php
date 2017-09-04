@@ -62,4 +62,14 @@ class Produits extends CI_Controller {
         $this->load->view('produits/appliques',$data);
         $this->load->view('common/footer');
 	}
+	public function detail()
+	{
+		$datahead = array();
+		$datahead['title'] = 'c-creation/detail produit';
+		$datahead['description'] = 'c-creation';
+		$data = array();
+		$this->load->view('common/header',$datahead);
+        $this->load->view('produits/detail',$data);
+        $this->load->view('common/footer');
+	}
 }
