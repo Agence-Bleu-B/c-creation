@@ -2,6 +2,12 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produits extends CI_Controller {
+	public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('connection_model');
+
+    }
 	public function index()
 	{
 		$datahead = array();
