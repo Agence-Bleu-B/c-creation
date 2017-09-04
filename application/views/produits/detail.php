@@ -41,77 +41,52 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
         </article>
         <!-- Grille nouveautés -->
-        <article class="col-md-9">
-            <h2 class="title_nouv">Les Appliques</h2>
+        <article class="col-md-8">
+            <h2 class="title_nouv"> Lorem Ipsum</h2>
             <ul class="row">
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
+                <!-- image détail -->
+                <div class="col-md-6 product_item">
                     <a href="#">
-                        <p>Ref. 0071</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampe-de-bureau-en-metal-rose-h-38-cm-pix-500-9-33-150544_0.jpg">
+                        
+                        <img class="img-responsive" id="img-detail" src="http://cdn.maisonsdumonde.com/img/lampe-de-bureau-en-metal-rose-h-38-cm-pix-500-9-33-150544_0.jpg" >
                     </a>
-                </li>
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
-                    <a href="#">
-                        <p>Ref. 0071</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-blanche-en-metal-d-50-cm-finmark-500-6-9-138097_1.jpg">
-                    </a>
-                </li>
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/applique-etirable-en-metal-grise-h-13-cm-lorient-500-6-0-148297_1.jpg">
-                    </a>
-                </li>
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://www.maisonsdumonde.com/img/lampe-en-metal-noir-h-41-cm-ikat-500-3-14-158766_1.jpg">
-                    </a>
-                </li>
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampadaire-trepied-en-metal-cuivre-h-174-cm-conquerant-500-8-17-130602_1.jpg">
-                    </a>
-                </li>
-                <!-- Produit -->
-                <li class="col-md-4 product_item">
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-non-electrifiee-en-metal-bleu-clair-d-33cm-confluent-500-14-4-167940_1.jpg">
-                    </a>
-                </li>
+                </div>
+
+                <!-- texte détail-->
+                <div class="col-md-6">
+                    <h4 class="ref">Référence produit: </h4>
+                    <p class="ref" id="numref">0071</p>
+                  
+
+                    <h4>
+                    Description:    
+                    </h4>
+
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam laoreet ut enim non finibus. Duis erat nibh, gravida quis volutpat ac, feugiat id nisl.
+                        Duis vel molestie arcu, sit amet ornare quam. Praesent nec augue quis enim sollicitudin semper ac ut mauris.
+                        Pellentesque volutpat metus quam, id finibus eros lobortis et. Suspendisse quis gravida ipsum, sit amet hendrerit nisl.
+                        Morbi ipsum enim, volutpat sed scelerisque nec, fermentum sit amet justo. Quisque malesuada eu arcu at mollis.
+                        Praesent porttitor nisi mi, vitae mollis dui faucibus et. Nunc pharetra efficitur tortor sed vestibulum. 
+                    </p>
+
+                </div>
+
+
+                <div class='col-md-4'>
+                    
+                    <h4 class="tarif">
+                        Tarif :
+                    </h4>
+                    <p class="tarif" id="prix-tarif">
+                        60€ TTC
+                    </p>
+                </div>
+                
+              
+
             </ul>
-            <div class="row pag_page">
-            <ul class="pagination">
-                <li>
-                    <a href="#">&laquo;</a>
-                </li>
-                <li>
-                    <a href="#">1</a>
-                </li>
-                <li>
-                    <a href="#">2</a>
-                </li>
-                <li>
-                    <a href="#">3</a>
-                </li>
-                <li>
-                    <a href="#">4</a>
-                </li>
-                <li>
-                    <a href="#">5</a>
-                </li>
-                <li>
-                    <a href="#">&raquo;</a>
-                </li>
-            </ul>
-        </div>
         </article>
     </section>
 </div>
