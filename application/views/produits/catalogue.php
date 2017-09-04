@@ -44,6 +44,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <img class="img-responsive" src="http://www.maisonsdumonde.com/img/applique-en-metal-brosse-h-47-cm-usine-500-14-35-154646_4.jpg">
                     </a>
                 </li>
+                <!-- lien vers catalogues -->
+                <li class="col-md-4" id="lien-catalogue">
+                    <p> Télécharger les catalogues ici :</p>
+                    <ul>
+                        <li>
+                            <a href="#">Lampes</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Lampadaires</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Suspension</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Plafonniers</a>
+                        </li>
+
+                        <li>
+                            <a href="#">Appliques</a>
+                        </li>
+                    </ul>
+                </li>
 
             </ul>
         </article>
