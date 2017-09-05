@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <!-- Example row of columns -->
 
   <section class="home_elmt row">
-       <article class="col-md-6" id="formulaire_co">
+       <article class="col-sm-offset-3 col-sm-4 col-md-4 col-md-offset-3" id="formulaire_co">
          <form >
             
             <h5>Login</h5>
