@@ -210,7 +210,13 @@ html,body {
 {
    position: relative;
     /*height: 325px;*/
+   overflow: hidden;
     margin-bottom: 30px;
+}
+
+.categorie_item img
+{
+  width: 100%;
 }
 
 .categorie_item a {
@@ -228,7 +234,7 @@ html,body {
     top: 0;
     height: 100%;
     width: 100%;
-    border: 1px solid #dadada;
+   /* border: 1px solid #dadada;*/
 }
 
 
@@ -236,11 +242,11 @@ html,body {
 .categorie_item a h2 {
     position: absolute;
     bottom: 40%;
-    right: 20%;
+    left: 0%;
     z-index: 999;
     color: #fff;
     font-size: 20px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,1);
     width: 60%;
     padding: 5px 0;
     text-align: center;
@@ -248,7 +254,45 @@ html,body {
 
 .categorie_item a h2:hover
 {
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.6);
+}
+
+#lien-catalogue
+{
+  position: relative;
+   overflow: hidden;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+/*connexion*/
+
+#formulaire_co
+{
+  position:relative;
+  left:25%;
+  margin-top: 10%;
+  margin-bottom: 25%;
+  border:1px solid #dadada;
+  width: 30%;
+  padding: 2%;
+}
+
+#sub_co
+{
+  margin-top: 6%;
+}
+
+.input_form
+{
+  width: 90%;
+}
+
+@media (max-height: 768px) {
+  #formulaire_co
+  {
+    margin_bottom:50%;
+  }
 }
 
 
