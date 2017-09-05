@@ -11,6 +11,11 @@ class Produits extends CI_Controller {
         $this->load->model('connection_model');
 
         //rajouter "if post"
+        if (isset($_POST['conect'])) {
+        	$mdp = $_POST['mdp'];
+			$log = $_POST['login'];
+			$this->connection_model->connection($log,$mdp);
+        }
 
         $this->isco = $this->connection_model->isconnect();
 
