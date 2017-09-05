@@ -26,7 +26,6 @@ class Produits extends CI_Controller {
 			$this->load->view('produits/catalogue',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
-        
         $this->load->view('common/footer');
 	}
 	public function lampes()
@@ -40,7 +39,6 @@ class Produits extends CI_Controller {
 			$this->load->view('produits/lampes',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
-
         $this->load->view('common/footer');
 	}
 	public function lampadaires()
@@ -50,7 +48,10 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/lampadaires',$data);
+        if ($this->isco == true) {
+			$this->load->view('produits/lampadaires',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
 	public function suspensions()
@@ -60,7 +61,10 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/suspensions',$data);
+        if ($this->isco == true) {
+			$this->load->view('produits/suspensions',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
 	public function plafonniers()
@@ -70,7 +74,10 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/plafonniers',$data);
+        if ($this->isco == true) {
+			$this->load->view('produits/plafonniers',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
 	public function appliques()
@@ -80,7 +87,10 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/appliques',$data);
+        if ($this->isco == true) {
+			$this->load->view('produits/appliques',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
 	public function detail()
@@ -90,20 +100,10 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/detail',$data);
-        $this->load->view('common/footer');
-	}
-
-	public function connexion()
-	{
-		$datahead = array();
-		$datahead['title'] = 'c-creation/connexion';
-		$datahead['description'] = 'c-creation';
-		$data = array();
-		$this->load->helper(array('form', 'url'));
-		$this->load->library('form_validation');
-		$this->load->view('common/header',$datahead);
-        $this->load->view('produits/connexion',$data);
+        if ($this->isco == true) {
+			$this->load->view('produits/detail',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
 
