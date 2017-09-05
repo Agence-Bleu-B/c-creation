@@ -41,8 +41,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="<?php echo base_url('about'); ?>">a propos</a>
             </li>
-            <li><a href="<?php echo base_url('magasin'); ?>">trouver un magasin</a>
-            </li>
+            <!-- <li><a href="<?php echo base_url('magasin'); ?>">trouver un magasin</a>
+            </li> -->
             <!-- <li><a href="<?php //echo base_url('presse'); ?>">revue de presse</a>
             </li> -->
             <li><a href="<?php echo base_url('contact'); ?>">contact/sav</a>
