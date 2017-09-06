@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <input class="input_form" type="password" name="mdp">
 
             <div id="sub_co">
-                <input type="submit" value="Connexion">
+                <input type="submit" value="Connexion" name="conect">
             </div>
              
         </form>
