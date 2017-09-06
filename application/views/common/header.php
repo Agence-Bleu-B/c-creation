@@ -56,5 +56,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <!--/.contatiner -->
 </div>
 <section class="haut_page">
-		<img src="<?php echo img_url('carr/ill-quotidien.png'); ?>" alt="illuminez votre quotidien">
+		<img src="<?php echo img_url('carr/WeChat Image_20170901173042-copie2.png'); ?>" alt="illuminez votre quotidien">
 </section>
