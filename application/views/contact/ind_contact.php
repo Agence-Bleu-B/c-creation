@@ -22,7 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="form-group">
                                 <label for="name">
                                     Nom</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                                <input type="text" class="form-control" id="name" placeholder="Votre Nom" required="required" />
                             </div>
                             <div class="form-group">
                                 <label for="email">
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                     </span>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                    <input type="email" class="form-control" id="email" placeholder="Votre Email" required="required" /></div>
                             </div>
                             <div class="form-group">
                                 <label for="subject">
