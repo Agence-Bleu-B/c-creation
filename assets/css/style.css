@@ -315,6 +315,9 @@ html,body {
   background: linear-gradient(to right, transparent 0%, #d77a16 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='transparent', endColorstr='#d77a16',GradientType=1 ); /* IE6-9 */
 }
+
+
+
 /* footer */
 footer {
   background: #d77a16;

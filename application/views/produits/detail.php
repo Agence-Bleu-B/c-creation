@@ -11,31 +11,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?php echo base_url('produits/lampes'); ?>" class="accordion-item">
                     <h2>Lampes</h2>
                     <div class="accordion-item-content">
-                      <img src="http://www.maisonsdumonde.com/img/lampe-vintage-en-metal-vert-pastel-h-45-cm-500-15-36-149768_2.jpg">
+                      <img src="<?php echo img_url('accordeon/macbook-690276_1280.jpg'); ?>">
+
                     </div>
                 </a>
                 <a href="<?php echo base_url('produits/lampadaires'); ?>" class="accordion-item">
                     <h2>Lampadaires</h2>
                     <div class="accordion-item-content">
-                      <img src="http://www.maisonsdumonde.com/img/lampadaire-trepied-en-bois-et-coton-noir-h-156-cm-karlsen-500-10-0-154693_8.jpg">
+                       <img src="<?php echo img_url('accordeon/lounge-609383_1280.jpg'); ?>">
                     </div>
                 </a>
-                <a href="<?php echo base_url('produits/suspensions'); ?>" class="accordion-item">
+                <a href="<?php echo base_url('produits/Suspensions'); ?>" class="accordion-item">
                     <h2>Suspensions</h2>
                     <div class="accordion-item-content">
-                      <img src="http://www.maisonsdumonde.com/img/suspension-en-metal-d-45-cm-diamond-copper-500-16-2-151333_5.jpg">
+                      <img src="<?php echo img_url('accordeon/bright-1851267_1280-2.jpg'); ?>">
                     </div>
                 </a>
                 <a href="<?php echo base_url('produits/Plafonniers'); ?>" class="accordion-item">
                     <h2>Plafonniers</h2>
                     <div class="accordion-item-content">
-                      <img src="http://cdn.maisonsdumonde.com/images/cache//4/8/-483b8a3dd36a6517d93e37ab5f369b70_w735_h735.jpg">
+                     <img src="<?php echo img_url('accordeon/ceiling-lamp-335975_1280.jpg'); ?>">
                     </div>
                 </a>
-                <a href="<?php echo base_url('produits/appliques'); ?>" class="accordion-item accordion-item--default">
+                <a href="<?php echo base_url('produits/Appliques'); ?>" class="accordion-item accordion-item--default">
                     <h2>Appliques</h2>
                     <div class="accordion-item-content">
-                      <img src="http://www.maisonsdumonde.com/img/applique-en-metal-brosse-h-47-cm-usine-500-14-35-154646_4.jpg">
+                       <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
                     </div>
                 </a>
             </div>

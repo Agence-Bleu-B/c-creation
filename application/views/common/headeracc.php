@@ -70,21 +70,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="carousel-inner" role="listbox">
             <!-- Slide -->
             <div class="item active">
-              <img src="<?php echo img_url('carr/ill-quotidien.png'); ?>" alt="illuminez votre quotidien">
+              <img src="<?php echo img_url('carr/WeChat Image_20170901173042-copie.png'); ?>" alt="illuminez votre quotidien">
               <div class="carousel-caption">
                 <p>illuminons <span>votre quotidien</span></p>
               </div>
             </div>
             <!-- Slide -->
             <div class="item ">
-              <img src="<?php echo img_url('carr/pexels-photo.jpeg');?>" alt="un intérieur à votre image">
+              <img src="<?php echo img_url('carr/WeChat Image_20170901173000-copie2.png');?>" alt="un intérieur à votre image">
               <div class="carousel-caption">                
                 <p>Un intérieur<span>à votre image</span></p>
               </div>
             </div>
             <!-- Slide -->
             <div class="item ">
-              <img src="<?php echo img_url('carr/design-interior.jpeg');?>" alt="la lumière au centre">
+              <img src="<?php echo img_url('carr/WeChat Image_20170901173048-copie2.png');?>" alt="la lumière au centre">
               <div class="carousel-caption">
                 <p>La lumière <span>au centre de votre vie</span></p>
               </div>
