@@ -13,9 +13,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      <div class="row description">
         <div class="col-md-offset-2 col-md-6">
             <p>
-                Ideo urbs venerabilis post superbas efferatarum gentium cervices oppressas latasque leges fundamenta libertatis et retinacula sempiterna velut frugi parens et prudens et dives Caesaribus tamquam liberis suis regenda patrimonii iura permisit.<br><br>
-                Proinde concepta rabie saeviore, quam desperatio incendebat et fames, amplificatis viribus ardore incohibili in excidium urbium matris Seleuciae efferebantur, quam comes tuebatur Castricius tresque legiones bellicis sudoribus induratae.<br><br>
-                Sed tamen haec cum ita tutius observentur, quidam vigore artuum inminuto rogati ad nuptias ubi aurum dextris manibus cavatis offertur, inpigre vel usque Spoletium pergunt. haec nobilium sunt instituta.<br>
+                C-CRÉATION est la marque distribuée par la BOUDET SAS
+
+                acteur depuis 50 ans dans le développement de luminaires.
+            </p>
+
+            <p>
+                En reprenant la société, je voulais proposer des produits
+
+                qui aient une réelle âme à des prix abordables.
+
+                Le plaisir de la décoration est ouvert à toutes et à tous,
+
+                nous essayons d’y apporter notre contribution.
+            </p>
+            <p>
+                Stéphane Boudet, PDG
             </p>
         </div>
         <div class="col-md-4">
