@@ -74,7 +74,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="col-md-4">
                 <form>
-                <legend><img src="<?php echo img_url('logos/logo.png'); ?>"><p></p></legend>
+                <legend><img src="<?php echo img_url('logos/logo_forme.png'); ?>"><p></p></legend>
                 <address>
                     <strong> BOUDET SAS</strong><br>
                     22350 CAULNES<br>

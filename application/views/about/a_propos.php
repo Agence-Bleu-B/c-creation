@@ -32,7 +32,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </p>
         </div>
         <div class="col-md-4">
-            <p><img src="<?php echo img_url('logos/logo.png'); ?>" class="img-responsive"></p>
+            <p><img src="<?php echo img_url('logos/logo_forme.png'); ?>" class="img-responsive"></p>
         </div>
     </div> 
     </section>
