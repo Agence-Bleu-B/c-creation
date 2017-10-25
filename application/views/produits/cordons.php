@@ -33,13 +33,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                      <img src="<?php echo img_url('accordeon/ceiling-lamp-335975_1280.jpg'); ?>">
                     </div>
                 </a>
-                <a href="<?php echo base_url('produits/cordons'); ?>" class="accordion-item">
+                <a href="<?php echo base_url('produits/cordons'); ?>" class="accordion-item accordion-item--default">
                     <h2>Cordons</h2>
                     <div class="accordion-item-content">
                        <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
                     </div>
                 </a>
-                <a href="<?php echo base_url('produits/pieces'); ?>" class="accordion-item accordion-item--default">
+                <a href="<?php echo base_url('produits/pieces'); ?>" class="accordion-item">
                     <h2>Pièces détachées</h2>
                     <div class="accordion-item-content">
                        <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </article>
         <!-- Grille nouveautés -->
         <article class="col-md-9">
-            <h2 class="title_nouv">Nouveautés</h2>
+            <h2 class="title_nouv">Les Cordons</h2>
              <!-- Produits -->
          <!--   <ul class="row">
                 
@@ -100,6 +100,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <h3 class="col-md-offset-4"> Indisponible pour le moment </h3>  
         </article>
     </section>
-
 </div>
 <!-- /container --> 

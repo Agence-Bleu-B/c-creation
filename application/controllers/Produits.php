@@ -72,20 +72,20 @@ class Produits extends CI_Controller {
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
-	public function plafonniers()
+	public function ampoules()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les plafonniers';
+		$datahead['title'] = 'c-creation/les ampoules';
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
-			$this->load->view('produits/plafonniers',$data);
+			$this->load->view('produits/ampoules',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
-	public function appliques()
+	public function cordons()
 	{
 		$datahead = array();
 		$datahead['title'] = 'c-creation/les appliques';
@@ -94,6 +94,19 @@ class Produits extends CI_Controller {
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
 			$this->load->view('produits/appliques',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
+        $this->load->view('common/footer');
+	}
+	public function pieces()
+	{
+		$datahead = array();
+		$datahead['title'] = 'c-creation/pieces detachees';
+		$datahead['description'] = 'c-creation';
+		$data = array();
+		$this->load->view('common/header',$datahead);
+        if ($this->isco == true) {
+			$this->load->view('produits/pieces',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
