@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?php echo base_url('produits/pieces'); ?>" class="accordion-item">
                     <h2>Pièces détachées</h2>
                     <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
+                       <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720.jpg'); ?>">
                     </div>
                 </a>
             </div>
