@@ -9,45 +9,60 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <article class="col-md-12">
             <h2 class="title_nouv">Nos Produits</h2>
              <!-- Produits -->
-           <div class="accordion">
-                <a href="<?php echo base_url('produits/lampes'); ?>" class="accordion-item">
-                    <h2>Lampes</h2>
-                    <div class="accordion-item-content">
-                      <img src="<?php echo img_url('accordeon/macbook-690276_1280.jpg'); ?>">
+             <div class="row" id="lienCatalogue">
+             <div class="col-md-offset-5">
+               <a  href="#">Notre catalogue en PDF</a>
+             </div>
+              
+            </div>
 
-                    </div>
+            <div class="row">
+              <div class="col-md-4">
+                <a href="<?php echo base_url('produits/lampes'); ?>" class="thumbnail">
+                  <img src="<?php echo img_url('accordeon/macbook-690276_1280.jpg'); ?>">
+                  <h2>lampes</h2> 
+                  
                 </a>
-                <a href="<?php echo base_url('produits/lampadaires'); ?>" class="accordion-item">
-                    <h2>Lampadaires</h2>
-                    <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/lounge-609383_1280.jpg'); ?>">
-                    </div>
+              </div>
+
+              <div class="col-md-4">
+                <a href="<?php echo base_url('produits/lampadaires'); ?>" class="thumbnail">
+                  <img src="<?php echo img_url('accordeon/lounge-609383_1280.jpg'); ?>">
+                  <h2>lampadaires</h2> 
                 </a>
-                <a href="<?php echo base_url('produits/suspensions'); ?>" class="accordion-item">
-                    <h2>Suspensions</h2>
-                    <div class="accordion-item-content">
-                      <img src="<?php echo img_url('accordeon/bright-1851267_1280-2.jpg'); ?>">
-                    </div>
+              </div>
+
+              <div class="col-md-4">
+                <a href="<?php echo base_url('produits/suspensions'); ?>" class="thumbnail">
+                  <img src="<?php echo img_url('accordeon/bright-1851267_1280-2.jpg'); ?>">
+                  <h2>suspensions</h2> 
                 </a>
-                <a href="<?php echo base_url('produits/ampoules'); ?>" class="accordion-item accordion-item--default">
-                    <h2>Ampoules</h2>
-                    <div class="accordion-item-content">
-                     <img src="<?php echo img_url('accordeon/ceiling-lamp-335975_1280.jpg'); ?>">
-                    </div>
+              </div>
+               <div class="col-md-4">
+                <a href="<?php echo base_url('produits/ampoules'); ?>" class="thumbnail">
+                  <img src="<?php echo img_url('accordeon/ceiling-lamp-335975_1280.jpg'); ?>">
+                  <h2>ampoules</h2> 
                 </a>
-                <a href="<?php echo base_url('produits/cordons'); ?>" class="accordion-item">
-                    <h2>Cordons</h2>
-                    <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
-                    </div>
+              </div>
+               <div class="col-md-4">
+                <a href="<?php echo base_url('produits/cordons'); ?>" class="thumbnail">
+                  <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
+                  <h2>cordons</h2> 
                 </a>
-                <a href="<?php echo base_url('produits/pieces'); ?>" class="accordion-item">
-                    <h2>Pièces détachées</h2>
-                    <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720.jpg'); ?>">
-                    </div>
+              </div>
+               <div class="col-md-4" >
+                <a href="<?php echo base_url('produits/pieces'); ?>" class="thumbnail" >
+                  <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
+                  <h2>pièces détachées</h2> 
                 </a>
-            </div> 
+              </div>
+            </div>
+            
+            
+
+
+
+
          
            
         </article>
