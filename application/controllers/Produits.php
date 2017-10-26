@@ -88,12 +88,12 @@ class Produits extends CI_Controller {
 	public function cordons()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les appliques';
+		$datahead['title'] = 'c-creation/cordons';
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
-			$this->load->view('produits/appliques',$data);
+			$this->load->view('produits/cordons',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
