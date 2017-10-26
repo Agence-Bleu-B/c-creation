@@ -10,8 +10,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv">Nos Produits</h2>
              <!-- Produits -->
              <div class="row" id="lienCatalogue">
-             <div class="col-md-offset-5">
-               <a  href="#">Notre catalogue en PDF</a>
+             <div class="col-md-offset-4 col-md-4">
+               <a  class="thumbnail" href="assets/pdf/Catalogue_CCREATION.pdf">Notre catalogue en PDF</a>
              </div>
               
             </div>
