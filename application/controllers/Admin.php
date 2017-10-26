@@ -42,7 +42,7 @@ class Admin extends CI_Controller {
 		}
        $this->load->view('admin/footer');
 	}
-	public function pages()
+	public function produits()
 	{
 		//verif si connecté
 	    if (!$this->isco) {
@@ -51,84 +51,29 @@ class Admin extends CI_Controller {
 
 
 		$this->load->view('admin/header',$this->data);
-		$this->load->view('admin/pages',$this->data2);
+		$this->load->view('admin/produits',$this->data2);
        	$this->load->view('admin/footer');
 	}
-	public function realisations()
+	public function clients()
 	{
 		//verif si connecté
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
 	    }
-	    $this->load->model('references_model');
-	    //si creation
-	    if (isset($_POST['newCH'])) {
-	    	$this->references_model->newReal($_POST,'centre_hospitalier');
-	    }
-	    if (isset($_POST['newIC'])) {
-	    	$this->references_model->newReal($_POST,'immeuble_et_cc');
-	    }
-	    if (isset($_POST['newCC'])) {
-	    	$this->references_model->newReal($_POST,'centre_culturels');
-	    }
-    	//si suppression
-	    if (isset($_POST['supressionCH'])) {
-	    	$this->references_model->supReal('centre_hospitalier','real_medias',$_POST['id']);
-	    }
-	    if (isset($_POST['supressionIC'])) {
-	    	$this->references_model->supReal('immeuble_et_cc','real_medias2',$_POST['id']);
-	    }
-	    if (isset($_POST['supressionCC'])) {
-	    	$this->references_model->supReal('centre_culturels','real_medias3',$_POST['id']);
-	    }
-	    //si modifi textes
-		if (isset($_POST['modifCH'])) {
-	    	$this->references_model->modifReal('centre_hospitalier',$_POST);
-	    }
-	    if (isset($_POST['modifIC'])) {
-	    	$this->references_model->modifReal('immeuble_et_cc',$_POST);
-	    }
-	    if (isset($_POST['modifCC'])) {
-	    	$this->references_model->modifReal('centre_culturels',$_POST);
-	    }
-	    //si modif images
-	    if (isset($_POST['supphCH'])) {
-	    	if (isset($_POST['tosup'])) {
-	    		$this->references_model->supPhoto('real_medias',$_POST);
-	    	}
-	    }
-	    if (isset($_POST['supphIC'])) {
-	    	if (isset($_POST['tosup'])) {
-	    		$this->references_model->supPhoto('real_medias2',$_POST);
-	    	}
-	    }
-	    if (isset($_POST['supphCC'])) {
-	    	if (isset($_POST['tosup'])) {
-	    		$this->references_model->supPhoto('real_medias3',$_POST);
-	    	}
-	    }
-	    //si upload images
-	    if (isset($_POST['addphCH'])) {
-	    	$this->references_model->addPhoto('real_medias',$_POST);
-	    	
-	    }
-	    if (isset($_POST['addphIC'])) {
-	    	$this->references_model->addPhoto('real_medias2',$_POST);
-	    }
-	    if (isset($_POST['addphCC'])) {
-	    	$this->references_model->addPhoto('real_medias3',$_POST);
-	    }
-	    //chargement données
-		//centre hsopitaliers
-		$this->data2['CH'] = $this->references_model->getLists('centre_hospitalier','real_medias','CH');
-		//imeuble et centre commerciaux
-		$this->data2['IC'] = $this->references_model->getLists('immeuble_et_cc','real_medias2','IC');
-		//centre culturels
-		$this->data2['CC'] = $this->references_model->getLists('centre_culturels','real_medias3','CC');
-
 		//affichage page 
 		$this->load->view('admin/header',$this->data);
-		$this->load->view('admin/realisations',$this->data2);
+		$this->load->view('admin/clients',$this->data2);
+       	$this->load->view('admin/footer');
+	}
+	public function nouveautes()
+	{
+		//verif si connecté
+	    if (!$this->isco) {
+	    	redirect('/admin', 'refresh');
+	    }
+		//affichage page 
+		$this->load->view('admin/header',$this->data);
+		$this->load->view('admin/nouveautes',$this->data2);
        	$this->load->view('admin/footer');
 	}
 }

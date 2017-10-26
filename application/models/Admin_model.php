@@ -16,7 +16,7 @@ class Admin_model extends CI_Model
     //connection et mise en session
     public function connection($login,$mdp){
 
-        if ($login == "adminGrison" && $mdp == "grison2017ADMIN") {
+        if ($login == "adminCcreation" && $mdp == "c2017creation") {
             $this->session->adminco = true;
         }
         

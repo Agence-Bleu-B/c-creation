@@ -28,7 +28,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		                <span class="icon-bar"></span>
 		            </button>
 		            <a class="navbar-brand" href="<?php echo site_url('accueil'); ?>" >
-		                <img class="img-responsive" style="max-height: 40px;" src="<?php echo img_url("grison_logo.png"); ?>" />
+		                <img class="img-responsive" style="max-height: 40px;" src="<?php echo img_url("logos/logo_forme.png"); ?>" />
 		            </a>
 		        </div>
 		      
