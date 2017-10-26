@@ -11,5 +11,6 @@ class Accueil extends CI_Controller {
 		$this->load->view('common/headeracc',$datahead);
         $this->load->view('accueil/home',$data);
         $this->load->view('common/footer');
+
 	}
 }
