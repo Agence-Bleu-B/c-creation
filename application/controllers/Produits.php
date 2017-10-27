@@ -29,6 +29,8 @@ class Produits extends CI_Controller {
 		$this->load->view('common/header',$datahead);
 		if ($this->isco == true) {
 			$this->load->view('produits/catalogue',$data);
+			
+
 		}
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
