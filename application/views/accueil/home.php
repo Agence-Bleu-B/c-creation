@@ -100,6 +100,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-non-electrifiee-en-metal-bleu-clair-d-33cm-confluent-500-14-4-167940_1.jpg">
                     </a>
                 </li>
+
+                 <li class="col-md-4 product_item">
+                <h2>lampes</h2>
+                    <a href="#">
+                        <p>Ref. 0070</p>
+                        <img class="img-responsive" src="http://www.maisonsdumonde.com/img/lampe-en-metal-noir-h-41-cm-ikat-500-3-14-158766_1.jpg">
+                    </a>
+                </li>
+                
+                <li class="col-md-4 product_item">
+                <h2>lampes</h2>
+                    <a href="#">
+                        <p>Ref. 0070</p>
+                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampadaire-trepied-en-metal-cuivre-h-174-cm-conquerant-500-8-17-130602_1.jpg">
+                    </a>
+                </li>
+                
+                <li class="col-md-4 product_item">
+                <h2>lampes</h2>
+                    <a href="#">
+                        <p>Ref. 0070</p>
+                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-non-electrifiee-en-metal-bleu-clair-d-33cm-confluent-500-14-4-167940_1.jpg">
+                    </a>
+                </li>
             </ul> 
 
           
