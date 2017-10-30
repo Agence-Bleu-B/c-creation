@@ -52,6 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv">Les Lampadaires</h2>
             <!-- Produits -->
             <ul class="row">
+            
                 <?php for ($i=0; $i < 6 ; $i++) { ?>
                     
                     <li class="col-md-4 product_item">

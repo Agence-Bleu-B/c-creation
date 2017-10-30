@@ -8,6 +8,9 @@ class Accueil extends CI_Controller {
 		$datahead['title'] = 'c-creation';
 		$datahead['description'] = 'c-creation';
 		$data = array();
+		$this->load->model('Produit_model');
+		$data['list_nouv']=$this->Produit_model->get_nouveaute();
+
 		$this->load->view('common/headeracc',$datahead);
         $this->load->view('accueil/home',$data);
         $this->load->view('common/footer');

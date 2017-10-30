@@ -72,4 +72,14 @@ class Produit_model extends CI_Model
 
     	return $liste;
     }
+
+    public function get_nouveaute()
+    {
+        $req = 'SELECT * FROM nouveaute NATURAL JOIN produits';
+        $query = $this->db->query($req);
+        $liste = $query->result_array();
+
+        return $liste;
+    }
+
 }

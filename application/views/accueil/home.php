@@ -52,78 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv">Nouveautés</h2>
              <!-- Produits -->
             <ul class="row">
-                
-                <li class="col-md-4 product_item">
-                    <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0071</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampe-de-bureau-en-metal-rose-h-38-cm-pix-500-9-33-150544_0.jpg">
-                    </a>
-                </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0071</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-blanche-en-metal-d-50-cm-finmark-500-6-9-138097_1.jpg">
-                    </a>
-                </li>
-               
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/applique-etirable-en-metal-grise-h-13-cm-lorient-500-6-0-148297_1.jpg">
-                    </a>
-                </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://www.maisonsdumonde.com/img/lampe-en-metal-noir-h-41-cm-ikat-500-3-14-158766_1.jpg">
-                    </a>
-                </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampadaire-trepied-en-metal-cuivre-h-174-cm-conquerant-500-8-17-130602_1.jpg">
-                    </a>
-                </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-non-electrifiee-en-metal-bleu-clair-d-33cm-confluent-500-14-4-167940_1.jpg">
-                    </a>
-                </li>
 
-                 <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://www.maisonsdumonde.com/img/lampe-en-metal-noir-h-41-cm-ikat-500-3-14-158766_1.jpg">
+            <?php for ($i=0; $i < 9 ; $i++) { ?>
+                    
+                    <li class="col-md-4 product_item">
+                    <h2><?php echo $list_nouv[$i]['nom']?></h2>
+                    <a href="<?php echo base_url('produits/detail');?>">
+                        <p>Ref. <?php echo $list_nouv[$i]['ref'];?></p>
+                        <img class="img-responsive" src="<?php echo img_url('produits/'.$list_nouv[$i]['image'])?>">
                     </a>
                 </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampadaire-trepied-en-metal-cuivre-h-174-cm-conquerant-500-8-17-130602_1.jpg">
-                    </a>
-                </li>
-                
-                <li class="col-md-4 product_item">
-                <h2>lampes</h2>
-                    <a href="#">
-                        <p>Ref. 0070</p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/suspension-non-electrifiee-en-metal-bleu-clair-d-33cm-confluent-500-14-4-167940_1.jpg">
-                    </a>
-                </li>
+               <?php }?>  
             </ul> 
 
           
