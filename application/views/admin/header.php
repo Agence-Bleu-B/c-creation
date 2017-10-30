@@ -44,12 +44,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  					<li <?php if ($pagecours == 'index') {echo 'class="active-link"';}?>>
                         <a href="<?php echo site_url('admin'); ?>" ><i class="fa fa-desktop "></i>Accueil</a>
                     </li>
-                    <li <?php if ($pagecours == 'realisations') {echo 'class="active-link"';}?>>
-                        <a href="<?php echo site_url('admin/realisations'); ?>"><i class="fa fa-th-list"></i>Réalisations</a>
+                    <li <?php if ($pagecours == 'nouveautes') {echo 'class="active-link"';}?>>
+                        <a href="<?php echo site_url('admin/nouveautes'); ?>"><i class="fa fa-th-list"></i>Nouveautés</a>
                     </li>
-                    <!-- <li <?php if ($pagecours == 'pages') {echo 'class="active-link"';}?>>
-                        <a href="<?php echo site_url('admin/pages'); ?>"><i class="fa fa-edit"></i>Pages</a>
-                    </li> -->
+                    <li <?php if ($pagecours == 'produits') {echo 'class="active-link"';}?>>
+                        <a href="<?php echo site_url('admin/produits'); ?>"><i class="fa fa-edit"></i>Produits</a>
+                    </li>
                 </ul>
             </div>
         </nav>

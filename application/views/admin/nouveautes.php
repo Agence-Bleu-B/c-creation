@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div id="page-inner">
         <div class="row">
             <div class="col-md-12">
-             <h2>GESTION DES PAGES</h2>   
+             <h2>NOUVEAUTES</h2>   
             </div>
         </div>              
          <!-- /. ROW  -->
