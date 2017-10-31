@@ -53,11 +53,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv">Les Lampes</h2>
              <!-- Produits -->
            <ul class="row">
-                <?php for ($i=0; $i < 6 ; $i++) { ?>
+               <?php for ($i=0; $i < count($list_prod) ; $i++) { ?>
                     
                     <li class="col-md-4 product_item">
                     <a href="<?php echo base_url('produits/detail');?>">
-                        <p>Ref. 007<?php echo $i;?></p>
+                        <p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
                         <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampe-de-bureau-en-metal-rose-h-38-cm-pix-500-9-33-150544_0.jpg">
                     </a>
                 </li>

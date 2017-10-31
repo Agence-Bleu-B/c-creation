@@ -63,6 +63,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                <?php }?>
 
             </ul> 
+
+      <!--  <div class="row">
+            <ul class="pag_page col-md-offset-5" >
+            <li><a  href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
+            <li><a class="pag_active" href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a onclick="goright()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+
+        <script type="text/javascript">
+            function goright () {
+
+                var p = document.getElementsByClassName('pag_active')[0];
+                var pnext = p.nextElementSibling;
+
+                p.classList.remove('pag_active');
+                pnext.classList.add('pag_active');
+            }
+
+        </script>-->
+        <div class="row">
+            <div class="col-md-offset-5">
+                <?php echo $pagination;?>
+            </div>
+        </div>
+        
+        
           
           
            

@@ -396,8 +396,40 @@ footer a img {
 }
 /* pagination */
 .pag_page {
-  text-align: center; 
+  list-style: none;
+  
+  font-size: 1.2em;
 }
+
+.pag_page li
+{
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+} 
+
+.pag_page li a
+{
+  text-decoration: none;
+  color: grey;
+  padding: 5px;
+
+}
+
+.pag_active
+{
+  background-color: lightgrey;
+  color: #d77a16;
+  font-weight: bold;
+}
+
+.pag_page a:hover
+{
+  
+  color: #d77a16;
+  font-weight: bold;
+}
+
 .pagination > li > a, .pagination > li > span {
   color: #878786;
 }
