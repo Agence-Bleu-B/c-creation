@@ -28,6 +28,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
               </div>
             </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6">
+              <div class="div-square">
+                  <a href="<?php echo site_url('admin/clients'); ?>" >
+                    <i class="fa fa-address-book fa-5x"></i>
+                  <h4>Clients</h4>
+                </a>
+              </div>
+            </div>
       	</div>
       	<!-- /. contenu  -->
          <!-- /. ROW  -->           

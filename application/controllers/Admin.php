@@ -56,10 +56,12 @@ class Admin extends CI_Controller {
 	}
 	public function clients()
 	{
+		$this->load->model('clients_model');
 		//verif si connecté
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
 	    }
+	    $this->data2['clients_liste'] = $this->clients_model->get_clients();
 		//affichage page 
 		$this->load->view('admin/header',$this->data);
 		$this->load->view('admin/clients',$this->data2);

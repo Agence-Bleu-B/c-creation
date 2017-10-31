@@ -50,6 +50,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <li <?php if ($pagecours == 'produits') {echo 'class="active-link"';}?>>
                         <a href="<?php echo site_url('admin/produits'); ?>"><i class="fa fa-edit"></i>Produits</a>
                     </li>
+                    <li <?php if ($pagecours == 'clients') {echo 'class="active-link"';}?>>
+                        <a href="<?php echo site_url('admin/clients'); ?>"><i class="fa fa-address-book"></i>Clients</a>
+                    </li>
                 </ul>
             </div>
         </nav>
