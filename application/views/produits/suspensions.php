@@ -52,7 +52,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv">Les Suspensions</h2>
              <!-- Produits -->
          <ul class="row">
-                <?php for ($i=0; $i < count($list_prod) ; $i++) { ?>
+                <?php for ($i=0; $i < count($list_prod); $i++) { ?>
                     
                     <li class="col-md-4 product_item">
                     <a href="<?php echo base_url('produits/detail');?>">
@@ -75,18 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <li><a onclick="goright()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
             </ul>
         </div>
-
-        <script type="text/javascript">
-            function goright () {
-
-                var p = document.getElementsByClassName('pag_active')[0];
-                var pnext = p.nextElementSibling;
-
-                p.classList.remove('pag_active');
-                pnext.classList.add('pag_active');
-            }
-
-        </script>-->
+-->
         <div class="row">
             <div class="col-md-offset-5">
                 <?php echo $pagination;?>

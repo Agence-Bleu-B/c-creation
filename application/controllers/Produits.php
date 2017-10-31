@@ -71,13 +71,14 @@ class Produits extends CI_Controller {
 		$datahead['description'] = 'c-creation';
 		$data = array();
 		$this->load->library('pagination');
+		$config['base_url']=base_url('produits/supsensions');
 		$config['total_rows'] = 200;
-		$config['per_page'] = 20;
+		$config['per_page'] = 9;
 
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
 			
-			$data['list_prod']=$this->Produit_model->get_by_cat('suspension');
+			$data['list_prod']=$this->Produit_model->get_by_cat($config['per_page'],'suspension');
 			$this->pagination->initialize($config);
 			$data['pagination']=$this->pagination->create_links();
 			$this->load->view('produits/suspensions',$data);

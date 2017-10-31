@@ -74,8 +74,10 @@ class Admin extends CI_Controller {
 	    	redirect('/admin', 'refresh');
 	    }
 		//affichage page 
+		$this->load->model('Produit_model');
+		$this->data['list_nouv']=$this->Produit_model->get_nouveaute();
 		$this->load->view('admin/header',$this->data);
-		$this->load->view('admin/nouveautes',$this->data2);
+		$this->load->view('admin/nouveautes',$this->data);
        	$this->load->view('admin/footer');
 	}
 }
