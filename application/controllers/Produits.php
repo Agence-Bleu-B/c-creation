@@ -9,6 +9,7 @@ class Produits extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('connection_model');
+        $this->load->model('Produit_model');
 
         //rajouter "if post"
         if (isset($_POST['conect'])) {
@@ -43,6 +44,7 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+        	$data['list_prod']=$this->Produit_model->get_by_cat('lampe');
 			$this->load->view('produits/lampes',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
@@ -56,6 +58,7 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+        	$data['list_prod']=$this->Produit_model->get_by_cat('lampadaire');
 			$this->load->view('produits/lampadaires',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
@@ -69,6 +72,8 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+			
+			$data['list_prod']=$this->Produit_model->get_by_cat('suspension');
 			$this->load->view('produits/suspensions',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
@@ -82,6 +87,7 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+        	$data['list_prod']=$this->Produit_model->get_by_cat('ampoule');
 			$this->load->view('produits/ampoules',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
@@ -95,6 +101,7 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+        	$data['list_prod']=$this->Produit_model->get_by_cat('cordon');
 			$this->load->view('produits/cordons',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}
@@ -108,6 +115,7 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
+        	$data['list_prod']=$this->Produit_model->get_by_cat('piece');
 			$this->load->view('produits/pieces',$data);
 		}
 		else{$this->load->view('produits/connexion',$data);}

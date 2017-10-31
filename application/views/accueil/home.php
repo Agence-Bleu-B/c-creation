@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <?php for ($i=0; $i < 9 ; $i++) { ?>
                     
                     <li class="col-md-4 product_item">
-                    <h2><?php echo $list_nouv[$i]['nom']?></h2>
+                    <h3><?php echo $list_nouv[$i]['nom']?></h3>
                     <a href="<?php echo base_url('produits/detail');?>">
                         <p>Ref. <?php echo $list_nouv[$i]['ref'];?></p>
                         <img class="img-responsive" src="<?php echo img_url('produits/'.$list_nouv[$i]['image'])?>">
