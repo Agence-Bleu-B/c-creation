@@ -77,7 +77,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
 -->
         <div class="row">
-            <div class="col-md-offset-5">
+            <div class="col-md-offset-5 pag_page">
                 <?php echo $pagination;?>
             </div>
         </div>

@@ -10,7 +10,13 @@ class Produit_model extends CI_Model
     	return $liste;
     }
 
-    public function get_by_cat($limit,$cat)
+    public function max_ligne()
+    {
+        return $this->db->count_all("produits");
+    }
+
+
+    public function get_by_cat($offset,$limit,$cat)
     {
     	if($cat === 0)
     	{
@@ -18,13 +24,21 @@ class Produit_model extends CI_Model
     	}
     	else
     	{
-			$req= 'SELECT * FROM produits WHERE categorie = '."'".$cat."'"." LIMIT ".$limit;
+            
+			//$req= 'SELECT * FROM produits WHERE categorie = '.'"'.$cat.'"'.' LIMIT '.$offset.','.$limit;
+            $req=$this->db->select()
+                            ->from('produits')
+                            ->where('categorie = '.'"'.$cat.'"')
+                            ->limit($limit,$offset)
+                            ->order_by('ref')
+                            ->get()
+                            ->result_array();
     	}
     				
-    	$query = $this->db->query($req);
-    	$liste = $query->result_array();
+    	//$query = $this->db->query($req);
+    	//$liste = $query->result_array();
 
-    	return $liste;
+    	return $req;
     }
 
     public function add_prod($post)
