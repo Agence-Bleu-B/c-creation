@@ -13,7 +13,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <!-- contenu a partir d'ici -->
         <div class="row text-center pad-top">
             <div class="col-md-12" >
-                <a href="#new" data-lity >nouveau</a>
+                <a href="#new" data-lity ><div class="btn btn-info" style="margin-bottom: 25px;" >nouveau</div></a>
             </div>
             <!-- debut bloc new textes -->
             <div id="new" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             foreach ($clients_liste as $key => $value) { ?>
                 <div class="col-md-2" >
                     <a href="<?php echo '#'.$value['id'] ;?>" data-lity >
-                        <div class="btn btn-default" ><?php echo $value['login']; ?></div>
+                        <div class="btn btn-default" style="margin-bottom: 25px;" ><?php echo $value['login']; ?></div>
                     </a>
                 </div>
             <?php } ?>
