@@ -61,6 +61,20 @@ class Admin extends CI_Controller {
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
 	    }
+	    //si demande de suppression
+	    if (isset($_POST['sup'])) {
+	    	$this->clients_model->delete_client($_POST);
+	    }
+	    //si demande de creation
+	    if (isset($_POST['new'])) {
+	    	$this->clients_model->new_client($_POST);
+	    }
+	    //si demande de modif
+	    if (isset($_POST['modif'])) {
+	    	$this->clients_model->modif_client($_POST);
+	    }
+
+	    //recuperation clients
 	    $this->data2['clients_liste'] = $this->clients_model->get_clients();
 		//affichage page 
 		$this->load->view('admin/header',$this->data);

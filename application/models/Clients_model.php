@@ -10,4 +10,27 @@ class clients_model extends CI_Model
 
         return $liste;
     }
+    //creation nouveau client
+    public function new_client($post){
+    	$data = array(
+        'login' => $post['login'],
+        'mdp' => $post['mdp']
+		);
+
+		$this->db->insert("clients", $data);
+    }
+    //modification client
+    public function modif_client($post){
+    	$data = array(
+        'login' => $post['login'],
+        'mdp' => $post['mdp']
+		);
+
+		$this->db->where('id', $post['id']);
+		$this->db->update('clients' , $data);
+    }
+    //suppression client
+    public function delete_client($post){
+    	$this->db->delete('clients', array('id' => $post['id']));
+    }
 }
