@@ -3,3 +3,5 @@
 *.sqlite
 .vs/slnx.sqlite
 *.sqlite
+.vs/config/applicationhost.config
+*.sqlite

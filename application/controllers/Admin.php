@@ -28,7 +28,7 @@ class Admin extends CI_Controller {
 	    $explode = explode('/', $this->uri->ruri_string());
 		$this->data['pagecours'] = $explode[1];
     }
-	
+
 	public function index()
 	{
 		//affichage page selon connection
@@ -48,7 +48,17 @@ class Admin extends CI_Controller {
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
 	    }
+		//chargement models
+		$this->load->model('produit_model');
+		//actions
 
+		//mise en variables
+		$this->data2['listLampes']= $this->produit_model->get_cat('lampe');
+		$this->data2['listLampadaires']= $this->produit_model->get_cat('lampadaire');
+		$this->data2['listSuspensions']= $this->produit_model->get_cat('suspension');
+		$this->data2['listAmpoules']= $this->produit_model->get_cat('ampoule');
+		$this->data2['listCordons']= $this->produit_model->get_cat('cordon');
+		$this->data2['listPiece']= $this->produit_model->get_cat('piece');
 
 		$this->load->view('admin/header',$this->data);
 		$this->load->view('admin/produits',$this->data2);
@@ -76,7 +86,7 @@ class Admin extends CI_Controller {
 
 	    //recuperation clients
 	    $this->data2['clients_liste'] = $this->clients_model->get_clients();
-		//affichage page 
+		//affichage page
 		$this->load->view('admin/header',$this->data);
 		$this->load->view('admin/clients',$this->data2);
        	$this->load->view('admin/footer');
@@ -87,7 +97,7 @@ class Admin extends CI_Controller {
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
 	    }
-		//affichage page 
+		//affichage page
 		$this->load->model('Produit_model');
 		$this->data['list_nouv']=$this->Produit_model->get_nouveaute();
 		$this->load->view('admin/header',$this->data);

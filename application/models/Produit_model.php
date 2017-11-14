@@ -9,6 +9,18 @@ class Produit_model extends CI_Model
 
     	return $liste;
     }
+	//produitspar categorie, sans pagination(admin)
+	public function get_cat($cat)
+	{
+		$result=$this->db->select()
+                            ->from('produits')
+                            ->where('categorie = '.'"'.$cat.'"')
+                            ->order_by('ref')
+                            ->get()
+                            ->result_array();
+		return $result;
+	}
+
 
     public function max_ligne()
     {
@@ -24,7 +36,7 @@ class Produit_model extends CI_Model
     	}
     	else
     	{
-            
+
 			//$req= 'SELECT * FROM produits WHERE categorie = '.'"'.$cat.'"'.' LIMIT '.$offset.','.$limit;
             $req=$this->db->select()
                             ->from('produits')
@@ -34,7 +46,7 @@ class Produit_model extends CI_Model
                             ->get()
                             ->result_array();
     	}
-    				
+
     	//$query = $this->db->query($req);
     	//$liste = $query->result_array();
 
