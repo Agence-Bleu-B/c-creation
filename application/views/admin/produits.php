@@ -12,11 +12,43 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       	<hr />
       	<!-- contenu a partir d'ici -->
       	<div class="row text-center pad-top">
+              <!--bouton new-->
 		  	<div class="col-md-12">
 		  		<a href="#new" data-lity>
 		  			<div class="btn btn-info" style="margin-bottom: 25px;">nouveau</div>
 		  		</a>
 		  	</div>
+              <!--form new-->
+            <div id="new" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
+              <div class="container-fluid">
+                <div class="row">
+                 <div class="col-xs-12">
+                     <form method="post">
+                         <label for="ref" >ref</label><br />
+                         <input type="text" name="ref" id="ref" /><br />
+                         <label for="nom">nom</label>
+                         <input type="text" name="nom" id="nom" /><br />
+                         <label for="categorie" >categorie</label><br />
+                         <select name="categorie" id="categorie">
+                             <option value="lampe">lampe</option>
+                             <option value="lampadaire">lampadaire</option>
+                             <option value="suspension">suspension</option>
+                             <option value="ampoule">ampoule</option>
+                             <option value="cordon">cordon</option>
+                             <option value="piece">piece</option>
+                         </select><br />
+                         <label for="dispo">dispo</label>
+                         <input type="text" name="dispo" id="dispo" /><br />
+                         <label for="coloris">coloris</label>
+                         <textarea name="coloris" id="coloris"></textarea><br />
+                         <label for="dimensions">dimensions</label>
+                         <textarea name="dimensions" id="dimensions"></textarea><br />
+                         <input type="submit" value="Ok" />
+                     </form>
+                 </div>
+                </div>
+              </div>
+            </div>
             <div class="panel-group col-md-12" id="collapse" role="tablist" aria-multiselectable="true">
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="collapse-heading-one">
@@ -28,39 +60,51 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div id="collapse-one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-heading-one">
 						<div class="panel-body">
-							<style>td{border: 1px solid black;}</style>
-                            <table class="col-md-12">
-								<tr>
-									<td>ref</td>
-                                    <td>nom</td>
-                                    <td>coloris</td>
-                                    <td>dimensions</td>
-                                    <td>image</td>
-                                    <td>dispo</td>
-                                    <td>actions</td>
-								</tr>
-							<?php foreach ($listLampes as $key =>$value)
+                            <div class="row" >
+                                <div class="col-md-12">
+                                    <div class="col-md-1">ref</div>
+                                    <div class="col-md-2">nom</div>
+                                    <div class="col-md-2">coloris</div>
+                                    <div class="col-md-2">dimensions</div>
+                                    <div class="col-md-1">image</div>
+                                    <div class="col-md-2">dispo</div>
+                                    <div class="col-md-2">actions</div>
+                                </div>
+                                <?php foreach ($listLampes as $key =>$value)
 								{ ?>
-                                <form>
-                                    <tr>
-                                        <td><input type="text" value="<?php echo $value['ref'];  ?>"/></td>
-                                        <td><?php echo $value['nom'];  ?>
-                                        </td>
-                                        <td><?php echo $value['coloris'];  ?>
-                                        </td>
-                                        <td><?php echo $value['dimension'];  ?>
-                                        </td>
-                                        <td><?php echo $value['image'];  ?>
-                                        </td>
-                                        <td><?php echo $value['dispo'];  ?>
-                                        </td>
-                                        <td><?php echo $value['ref'];  ?>
-                                        </td>
-                                    </tr>
-                                </form>
-							<?php } ?>
-                            </table>
-						</div>
+                                    <div class="col-md-12">
+                                        <form>
+                                            <input type="hidden" value="<?php echo $value['id'];  ?>" />
+                                            <div class="col-md-1">
+                                                <input type="text" value="<?php echo $value['ref'];  ?>" />
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="text" value="<?php echo $value['nom'];  ?>" />
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="text" value="<?php echo $value['coloris'];  ?>" />
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="text" value="<?php echo $value['dimension'];  ?>" />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <input type="text" value="<?php echo $value['image'];  ?>" />
+                                            </div>
+                                            <div class="col-md-2">
+                                                <input type="text" value="<?php echo $value['dispo'];  ?>" />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <input type="submit" value="modifier" />
+                                            </div>
+                                        </form>
+                                        <form>
+                                            <div class="col-md-1">
+                                                <input type="submit" value="supprimer" />
+                                            </div>
+                                        </form>
+                                    </div>
+                            </div><?php } ?>
+                        </div>
 					</div>
 				</div>
                 <div class="panel panel-default">
