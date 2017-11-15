@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <div id="page-wrapper" >
@@ -41,9 +41,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 								</tr>
 							<?php foreach ($listLampes as $key =>$value)
 								{ ?>
-                                <tr>
-                                    <td></td>
-                                </tr>
+                                <form>
+                                    <tr>
+                                        <td><input type="text" value="<?php echo $value['ref'];  ?>"/></td>
+                                        <td><?php echo $value['nom'];  ?>
+                                        </td>
+                                        <td><?php echo $value['coloris'];  ?>
+                                        </td>
+                                        <td><?php echo $value['dimension'];  ?>
+                                        </td>
+                                        <td><?php echo $value['image'];  ?>
+                                        </td>
+                                        <td><?php echo $value['dispo'];  ?>
+                                        </td>
+                                        <td><?php echo $value['ref'];  ?>
+                                        </td>
+                                    </tr>
+                                </form>
 							<?php } ?>
                             </table>
 						</div>
