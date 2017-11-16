@@ -61,16 +61,15 @@ class Produit_model extends CI_Model
     		'coloris' =>$post['coloris'],
     		'dimension' =>$post['dimension'],
     		'dispo' => $post['dispo'],
-    		'image' => $post['image'],
     		'categorie' => $post['categorie']);
 
     	$this->db->insert('produits',$data);
 
     }
 
-    public function supp_prod($ref)
+    public function supp_prod($id)
     {
-    	$this->db->delete('produits',array('ref'=>$ref));
+    	$this->db->delete('produits',array('id'=>$id));
     }
 
     public function modif_prod($post)
@@ -82,7 +81,6 @@ class Produit_model extends CI_Model
     		'coloris' =>$post['coloris'],
     		'dimension' =>$post['dimension'],
     		'dispo' => $post['dispo'],
-    		'image' => $post['image'],
     		'categorie' => $post['categorie']);
 
     	$this->db->where('id', $post['id']);

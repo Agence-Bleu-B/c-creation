@@ -51,7 +51,15 @@ class Admin extends CI_Controller {
 		//chargement models
 		$this->load->model('produit_model');
 		//actions
-
+		if (isset($_POST['new'])) {
+			$this->produit_model->add_prod($_POST);
+		}
+		if (isset($_POST['delete'])) {
+			$this->produit_model->supp_prod($_POST['id']);
+		}
+		if (isset($_POST['modif'])) {
+			$this->produit_model->modif_prod($_POST);
+		}
 		//mise en variables
 		$this->data2['listLampes']= $this->produit_model->get_cat('lampe');
 		$this->data2['listLampadaires']= $this->produit_model->get_cat('lampadaire');
