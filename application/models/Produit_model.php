@@ -105,5 +105,26 @@ class Produit_model extends CI_Model
 
         return $liste;
     }
-
+    public function modif_image($post,$files){
+        $filename=$files['photo']['name'];
+        //enregistre images
+        //load library
+        $this->load->library('upload');
+        // config upload
+        $chemin = './assets/images/produits';
+        $config['upload_path'] = $chemin;
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['max_size']    = '0';
+        $this->upload->initialize($config);
+        $this->upload->do_upload('photo');
+        $test = $this->upload->display_errors();
+        
+        $data = array(
+                'image'  => $this->upload->data('file_name')
+        );
+        $this->db->where('id', $post['id']);
+        $this->db->update('produits', $data);
+        return $test;
+    }
 }
+    

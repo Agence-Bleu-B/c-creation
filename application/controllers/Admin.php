@@ -60,6 +60,9 @@ class Admin extends CI_Controller {
 		if (isset($_POST['modif'])) {
 			$this->produit_model->modif_prod($_POST);
 		}
+		if (isset($_POST['changephoto'])) {
+			$this->produit_model->modif_image($_POST,$_FILES);
+		}
 		//mise en variables
 		$this->data2['listLampes']= $this->produit_model->get_cat('lampe');
 		$this->data2['listLampadaires']= $this->produit_model->get_cat('lampadaire');
