@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <section class="home_elmt row">
         <!-- Grille nouveautés -->
         <article class="col-md-12">
-            <h2 class="title_nouv"><?php print_r($detail); ?></h2>
+            <h2 class="title_nouv"><?php echo $detail[0]['nom']; ?></h2>
             <section class="row">
                 <!-- image détail -->
                 <div class="col-md-4 col-md-offset-2 product_item">
