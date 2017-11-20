@@ -152,6 +152,7 @@ class Produits extends CI_Controller {
 		$datahead['title'] = 'c-creation/detail produit';
 		$datahead['description'] = 'c-creation';
 		$data = array();
+		$this->data['detail'] = $this->produit_model->get_detail($_GET['ref']);
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
 			$this->load->view('produits/detail',$data);
