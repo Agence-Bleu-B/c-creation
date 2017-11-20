@@ -22,9 +22,12 @@ class Produit_model extends CI_Model
 	}
 
 
-    public function max_ligne()
+    public function max_ligne($cat)
     {
-        return $this->db->count_all("produits");
+        $this->db->where('categorie',$cat);
+        $this->db->from('produits');
+        $result = $this->db->count_all_results();
+        return $result;
     }
 
 

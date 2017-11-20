@@ -54,19 +54,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <ul class="row">
                 <?php for ($i=0; $i < count($list_prod); $i++) { ?>
                     
-                    <li class="col-md-4 product_item">
-<!--                     <a href="<?php echo base_url('produits/detail');?>">
-                        <p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
-                        <img class="img-responsive" src="http://cdn.maisonsdumonde.com/img/lampe-de-bureau-en-metal-rose-h-38-cm-pix-500-9-33-150544_0.jpg">
-                    </a> -->
+                <div class="col-md-4 product_item">
                     <h3><?php echo $list_prod[$i]['nom']?></h3>
                     <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'];?>">
                         <p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
                         <img class="img-responsive" src=<?php echo img_url('produits/'.$list_prod[$i]['image'])?>>
                     </a>
-
-
-                </li>
+                </div>
                <?php }?>
 
             </ul> 
