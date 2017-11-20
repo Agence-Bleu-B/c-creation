@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <article class="col-md-9">
             <h2 class="title_nouv">Les Suspensions</h2>
              <!-- Produits -->
-         <ul class="row">
+         <div class="row">
                 <?php for ($i=0; $i < count($list_prod); $i++) { ?>
                     
                 <div class="col-md-4 product_item">
@@ -63,20 +63,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                <?php }?>
 
-            </ul> 
-
-      <!--  <div class="row">
-            <ul class="pag_page col-md-offset-5" >
-            <li><a  href="#"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></li>
-            <li><a class="pag_active" href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a onclick="goright()" href="#"><i class="fa fa-chevron-right" aria-hidden="true"></i></a></li>
-            </ul>
-        </div>
--->
+            </div> 
         <div class="row">
             <div class="col-md-offset-5 pag_page">
                 <?php echo $pagination;?>
