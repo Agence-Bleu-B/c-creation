@@ -29,19 +29,21 @@ class Produit_model extends CI_Model
 
 
     public function get_by_cat($offset,$limit,$cat)
-    {
+    {   
     	if($cat === 0)
     	{
     		$req = 'SELECT * FROM produits';
     	}
     	else
     	{
+            
 
+            //$offset = ($pageNum-1) * $config['per_page'];
 			//$req= 'SELECT * FROM produits WHERE categorie = '.'"'.$cat.'"'.' LIMIT '.$offset.','.$limit;
             $req=$this->db->select()
                             ->from('produits')
                             ->where('categorie = '.'"'.$cat.'"')
-                            ->limit($limit,$offset)
+                            ->limit($limit)
                             ->order_by('ref')
                             ->get()
                             ->result_array();

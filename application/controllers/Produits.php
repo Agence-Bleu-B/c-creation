@@ -72,18 +72,15 @@ class Produits extends CI_Controller {
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/suspensions'); 
-		
 		$config['total_rows'] = $this->Produit_model->max_ligne();
 		$data['max'] = $this->Produit_model->max_ligne();
-		
-
 		if(!isset($_GET['per_page']))
 		{
 			$config['per_page'] = 9;
 		}
 		else
 		{
-			$config['per_page'] = $_GET['per_page'];
+			$config['per_page'] = $_GET['per_page'];	
 		}
 		
 		$config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
@@ -98,7 +95,7 @@ class Produits extends CI_Controller {
 		$this->load->view('common/header',$datahead);
         if ($this->isco == true) {
 			
-			$data['list_prod']=$this->Produit_model->get_by_cat($config['per_page']-9,$config['per_page'],'suspension');
+			$data['list_prod']=$this->Produit_model->get_by_cat($config['per_page'],$config['per_page'],'suspension');
 			$this->pagination->initialize($config);
 			$data['pagination']=$this->pagination->create_links();
 			$this->load->view('produits/suspensions',$data);
