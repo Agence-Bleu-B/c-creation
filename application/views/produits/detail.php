@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <section class="home_elmt row">
         <!-- Grille nouveautés -->
         <article class="col-md-12">
-            <h2 class="title_nouv"> Lorem Ipsum</h2>
+            <h2 class="title_nouv"><?php print_r($detail); ?></h2>
             <section class="row">
                 <!-- image détail -->
                 <div class="col-md-4 col-md-offset-2 product_item">
@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="col-md-6" id="texte-detail">
                 <ul>
                     <li><h4 class="ref">Référence produit: </h4>
-                    <p class="ref" id="numref">0071</p></li>
+                    <p class="ref" id="numref"></p></li>
                     
                     <li>
                         <h4>Coloris</h4>
