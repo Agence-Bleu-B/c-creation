@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <footer>
 	<div class="row">
         <div class="col-lg-12" >
-            &copy;  2017 ccas-dinan.com | Design by: <a href="#"  target="_blank">www.bleu-b.com</a> 
+            &copy;  2017 c-creation.com | Design by: <a href="#"  target="_blank">www.bleu-b.com</a> 
         </div>
     </div>
 </footer>
