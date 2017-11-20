@@ -96,7 +96,18 @@ class Produit_model extends CI_Model
 
     	return $liste;
     }
+    public function modif_nouveaute($post){
+        //effacement table
+        $this->db->truncate('nouveaute');
+        //assignation post
+        for ($i=0; $i < 9; $i++) { 
+            $data = array(
+                    'ref' => $post[$i]
+            );
 
+            $this->db->insert('nouveaute', $data);
+        }
+    }
     public function get_nouveaute()
     {
         $req = 'SELECT * FROM nouveaute NATURAL JOIN produits';

@@ -104,9 +104,14 @@ class Admin extends CI_Controller {
 	}
 	public function nouveautes()
 	{
+		$this->load->model('produit_model');
 		//verif si connecté
 	    if (!$this->isco) {
 	    	redirect('/admin', 'refresh');
+	    }
+	    //actions
+	    if (isset($_POST['modif'])) {
+	    	$this->produit_model->modif_nouveaute($_POST);
 	    }
 		//affichage page
 		$this->load->model('Produit_model');

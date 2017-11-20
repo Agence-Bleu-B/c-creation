@@ -12,12 +12,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       	<hr />
       	<!-- contenu a partir d'ici -->
       	<div class="row text-center pad-top">
-        <?php
-        foreach ($list_nouv as $key => $value) { ?>
-          <div class="col-md-4 product_item">
-            <?php echo $value['nom'];?>
-          </div>
-        <?php }?>
+          <form method="post" action="" >
+          <?php $i = 0;
+          foreach ($list_nouv as $key => $value) { ?>
+            <div class="col-md-4 product_item">
+              <?php echo $value['nom'];?><br>
+              <input type="text" value="<?php echo $value['ref'] ; ?>" name="<?php echo $i ; ?>" >
+            </div>
+          <?php $i++; }?>
+            <input type="submit" name="modif" value="Modifier">
+          </form>
       	</div>
       	<!-- /. contenu  -->
          <!-- /. ROW  -->           
