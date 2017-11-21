@@ -18,8 +18,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
              
         </form>
-
+        <p class="rappel"><a href="<?php echo base_url('contact'); ?>">Pour obtenir votre indentifiant et votre mot de passe contactez-nous.</a></p>
        </article>
+
+
         
         
     </section>

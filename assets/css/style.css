@@ -335,6 +335,17 @@ html,body {
   width: 90%;
 }
 
+.rappel{
+ margin-top:10px; 
+}
+
+.rappel a
+{
+color:#d77a16;
+margin:10px 0;
+}
+
+
 @media (max-height: 768px) {
   #formulaire_co
   {
