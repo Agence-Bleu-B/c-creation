@@ -199,7 +199,6 @@ html,body {
 
 #numref
 {
-  margin-left: 15px;
   font-size: 25px;
 }
 #img-detail
@@ -217,6 +216,15 @@ html,body {
 {
   list-style: none;
 }
+
+.details_content p,
+.details_content h4
+{
+margin-top:10px;
+}
+
+}
+
 /*catalogue */
 
 .categorie_item
