@@ -5,8 +5,8 @@ class Contact extends CI_Controller {
 	public function index()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation, contactez nous';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation créateur de lampes, contactez-nous';
+		$datahead['description'] = 'C-création, créateur de lampes, suspensions, luminaires design: contactez-nous!';
 		$data = array();
 
 

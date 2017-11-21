@@ -24,8 +24,9 @@ class Produits extends CI_Controller {
 	public function index()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/catalogue';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation, découvrez nos luminaires, lampes et ampoules';
+		$datahead['description'] = 'C-creation, découvrez nos créations lumineuses: lampes, lampadaires,
+		 suspensions, ampoules, cordons et pièces détachées. Apportez une luminosité nouvelle à votre décoration!';
 		$data = array();
 		$this->load->view('common/header',$datahead);
 		if ($this->isco == true) {
@@ -39,8 +40,8 @@ class Produits extends CI_Controller {
 	public function lampes()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les lampes';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation lampes design';
+		$datahead['description'] = 'Avec nos lampes design et qualitatives, apportez une luminosité nouvelle à votre décoration';
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/lampes'); 
@@ -76,8 +77,8 @@ class Produits extends CI_Controller {
 	public function lampadaires()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les lampadaires';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation, lampadaires de qualité';
+		$datahead['description'] = 'Avec nos lampadaires design et qualitatifs, apportez une luminosité nouvelle à votre décoration';
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/lampadaires'); 
@@ -113,8 +114,8 @@ class Produits extends CI_Controller {
 	public function suspensions()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les suspensions';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation, des suspensions design';
+		$datahead['description'] = "Nos suspensions d'exception apportent une luminosité nouvelle à votre décoration";
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/suspensions'); 
@@ -150,8 +151,8 @@ class Produits extends CI_Controller {
 	public function ampoules()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/les ampoules';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation, des ampoules de qualité';
+		$datahead['description'] = "Découvrez notre gamme d'ampoules de qualité à prix abordable";
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/ampoules'); 
@@ -186,8 +187,8 @@ class Produits extends CI_Controller {
 	public function cordons()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/cordons';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation des cordons de qualité';
+		$datahead['description'] = 'C-creation, des cordons qualitatifs et design, adaptés à votre décoration.';
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/cordons'); 
@@ -223,8 +224,8 @@ class Produits extends CI_Controller {
 	public function pieces()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation/pieces detachees';
-		$datahead['description'] = 'c-creation';
+		$datahead['title'] = 'c-creation pièces détachées de qualité';
+		$datahead['description'] = 'Retrouvez notre gamme complète de pièces détachées pour illuminer votre intérieur.';
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/pieces'); 
@@ -261,7 +262,8 @@ class Produits extends CI_Controller {
 	{
 		$datahead = array();
 		$datahead['title'] = 'c-creation/detail produit';
-		$datahead['description'] = 'c-creation';
+		$datahead['description'] = "C-creation, envie de voir votre intérieur sous un nouveau jour? Découvrez nos lampes,
+		ampoules et luminaires design à des prix abordables.";
 		$data = array();
 		$data['detail'] = $this->Produit_model->get_detail($_GET['ref']);		
 		$this->load->view('common/header',$datahead);
