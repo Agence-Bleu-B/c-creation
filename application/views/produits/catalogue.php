@@ -11,7 +11,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
              <!-- Produits -->
              <div class="row" id="lienCatalogue">
              <div class="col-md-offset-4 col-md-4">
-               <a  class="thumbnail" href="assets/pdf/Catalogue_CCREATION.pdf">Notre catalogue en PDF</a>
+               <a  class="thumbnail" href="assets/pdf/Catalogue_CCREATION.pdf" target="_blank">Notre catalogue en PDF</a>
              </div>
               
             </div>
