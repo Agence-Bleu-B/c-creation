@@ -19,38 +19,93 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <!-- texte détail-->
                 <div class="col-md-6" id="texte-detail">
+
                     <div class="row details_content">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <h4 class="ref">Référence produit: </h4>   
                         </div>   
-                        <div class="col-md-3">
-                            <h4 class="ref"><p class="ref" id="numref"><?php echo $detail[0]['ref']; ?></p></h4>   
+                        <div class="col-md-8">
+                            <h4 class="ref" ><p class="ref" id="numref"><?php echo $detail[0]['ref']; ?></p></h4>   
                         </div> 
                     </div>
 
                     <div class="row details_content">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <h4>Coloris:</h4> 
                         </div>   
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             <p><?php echo $detail[0]['coloris']; ?></p>   
                         </div> 
                     </div>
 
                     <div class="row details_content">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
+                            <h4>Matière:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
                             <h4>Dimension:</h4>
                         </div>   
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             <p><?php echo $detail[0]['dimension']; ?></p> 
                         </div> 
                     </div>
 
                     <div class="row details_content">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
+                            <h4>Nombre de lumières:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
+                            <h4>Ampoule(s) fournie(s):</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
+                            <h4>Type de culot:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
+                            <h4>Puissance max par lumière:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
+                            <h4>Tension:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
                             <h4>Disponibilité:</h4>
                         </div>   
-                        <div class="col-md-3">
+                        <div class="col-md-8">
                             <p><?php echo $detail[0]['dispo']; ?></p>
                         </div> 
                     </div>
