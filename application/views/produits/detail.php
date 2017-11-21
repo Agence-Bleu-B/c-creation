@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Matière:</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['matiere']; ?></p>   
                         </div> 
                     </div>
 
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Nombre de lumières:</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['nblumiere']; ?></p>   
                         </div> 
                     </div>
 
@@ -70,7 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Ampoule(s) fournie(s):</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['ampoule']; ?></p>   
                         </div> 
                     </div>
 
@@ -79,7 +79,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Type de culot:</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['culot']; ?></p>   
                         </div> 
                     </div>
 
@@ -88,7 +88,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Puissance max par lumière:</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['puiss']; ?></p>   
                         </div> 
                     </div>
 
@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <h4>Tension:</h4> 
                         </div>   
                         <div class="col-md-8">
-                            <p><?php echo $detail[0]['coloris']; ?></p>   
+                            <p><?php echo $detail[0]['tension']; ?></p>   
                         </div> 
                     </div>
 
