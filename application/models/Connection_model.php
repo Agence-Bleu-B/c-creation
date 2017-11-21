@@ -16,8 +16,15 @@ class connection_model extends CI_Model
     //connection et mise en session
     public function connection($login,$mdp){
 
-        if ($login == "test" && $mdp == "test2000") {
-            $this->session->connected = true;
+        $this->db->where('login',$login);
+        $this->db->from('clients');
+        $log = $this->db->count_all_results();
+        if ($log == 1) {
+            $req = $this->db->select('mdp')->where('login',$login)->from('clients')->get()->result_array();
+            
+            if ($mdp == $req[0]['mdp'] ) {
+               $this->session->connected = true;
+            };
         }
         
     }
