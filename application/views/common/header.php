@@ -34,11 +34,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <p class="logotop" ></p> 
           </a>
           <a class="navbar-brand smbrand hidden-sm hidden-md hidden-lg" href="<?php echo base_url(); ?>"><p>
-            <img src="<?php echo img_url('logos/logo.png'); ?>" class="img-responsive"/> </p>
+            <img src="<?php echo img_url('logos/logo_forme.png'); ?>" class="img-responsive"/> </p>
           </a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
+            <li class="active hidden-sm hidden-xs">
+              <a href="<?php echo base_url(); ?>"><i class="fa fa-home fa-lg" aria-hidden="true"></i></a>
+            </li> 
+            <li class="navbar-brand smbrand hidden-md hidden-lg">
+              <a href="<?php echo base_url('about'); ?>">accueil</a>
+            </li>        
             <li class="active"><a href="<?php echo base_url('about'); ?>">a propos</a>
             </li>
             <!-- <li><a href="<?php echo base_url('magasin'); ?>">trouver un magasin</a>
