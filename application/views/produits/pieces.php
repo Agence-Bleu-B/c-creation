@@ -49,7 +49,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </article>
         <!-- Grille nouveautés -->
         <article class="col-md-9">
-            <h2 class="title_nouv">Les Pièces Détachées</h2>
+            <h2 class="title_nouv"><a href="<?php echo base_url('produits/piecesP'); ?>"><i class="fa fa-th vignet" aria-hidden="true" ></i></a>Les Pièces Détachées</h2>
              <!-- Produits -->
          <div class="row">
                 <?php for ($i=0; $i < count($list_prod); $i++) { ?>
