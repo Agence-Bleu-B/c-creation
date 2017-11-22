@@ -273,5 +273,41 @@ class Produits extends CI_Controller {
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
+	public function suspensionsP()
+	{
+		$datahead = array();
+		$datahead['title'] = 'c-creation, des suspensions design small';
+		$datahead['description'] = "Nos suspensions d'exception apportent une luminosité nouvelle à votre décoration p";
+		$data = array();
+		$this->load->library('pagination');
+		$config['base_url']=site_url('produits/suspensions'); 
+		$config['total_rows'] = $this->Produit_model->max_ligne('suspension');
+		
+		$config['per_page'] = 18;
+		$config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
+		$config['prev_link'] =  '<i class="fa fa-chevron-left" aria-hidden="true"></i>';
+		$config['first_link']="début";
+		$config['last_link']="fin";
 
+		$config['page_query_string'] = TRUE;
+        $config['reuse_query_string'] = TRUE;
+
+        if (!isset($_GET['per_page'])) {
+        	$ppage = 0;
+        }
+        else{
+        	$ppage = $_GET['per_page'];
+        }
+	
+		$data['list_prod']=$this->Produit_model->get_by_cat($ppage,18,'suspension');
+		$this->pagination->initialize($config);
+		$data['pagination']=$this->pagination->create_links();
+
+		$this->load->view('common/header',$datahead);
+        if ($this->isco == true) {
+			$this->load->view('produits/suspensionsP',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
+        $this->load->view('common/footer');
+	}
 }

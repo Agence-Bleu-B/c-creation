@@ -114,8 +114,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
             </section>
              <div class="row">
-                        <a class="col-md-offset-2" href="<?php echo base_url('produits/'.$detail[0]['categorie'].'s');?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour produits</a>
-                     </div>
+                <?php if (!isset($_GET['P'])) { ?>
+                   <a class="col-md-offset-2" href="<?php echo base_url('produits/'.$detail[0]['categorie'].'s');?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour produits</a> 
+                <?php } else{ ?>
+                    <a class="col-md-offset-2" href="<?php echo base_url('produits/'.$detail[0]['categorie'].'sP');?>"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retour produits</a> 
+                <?php }?>
+             </div>
             
         </article>
     </section>
