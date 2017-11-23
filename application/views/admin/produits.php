@@ -37,6 +37,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                              <option value="cordon">cordon</option>
                              <option value="piece">piece</option>
                          </select><br />
+                         <label for="matiere">matière</label>
+                         <input type="text" name="matiere" id="matiere" /><br />
+                         <label for="nblumiere">nbre lumières</label>
+                         <input type="text" name="nblumiere" id="nblumiere" /><br />
+                         <label for="ampoule">ampoule</label>
+                         <input type="text" name="ampoule" id="ampoule" /><br />
+                         <label for="culot">culot</label>
+                         <input type="text" name="culot" id="culot" /><br />
+                         <label for="puiss">puissance</label>
+                         <input type="text" name="puiss" id="puiss" /><br />
+                         <label for="tension">tension</label>
+                         <input type="text" name="tension" id="tension" /><br />
                          <label for="dispo">dispo</label>
                          <input type="text" name="dispo" id="dispo" /><br />
                          <label for="coloris">coloris</label>
@@ -119,6 +131,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
@@ -226,6 +250,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br /> 
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
@@ -333,6 +369,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
@@ -440,6 +488,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
@@ -547,6 +607,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
@@ -654,6 +726,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
                                              </select><br />
+                                             <label for="matiere">matière</label>
+                                             <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
+                                             <label for="nblumiere">nbre lumières</label>
+                                             <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
+                                             <label for="ampoule">ampoule</label>
+                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <label for="culot">culot</label>
+                                             <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
+                                             <label for="puiss">puissance</label>
+                                             <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
+                                             <label for="tension">tension</label>
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>

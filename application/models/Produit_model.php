@@ -66,7 +66,13 @@ class Produit_model extends CI_Model
     		'coloris' =>$post['coloris'],
     		'dimension' =>$post['dimension'],
     		'dispo' => $post['dispo'],
-    		'categorie' => $post['categorie']);
+    		'categorie' => $post['categorie'],
+            'matiere' => $post['matiere'],
+            'nblumiere' => $post['nblumiere'],
+            'ampoule' => $post['ampoule'],
+            'culot' => $post['culot'],
+            'puiss' => $post['puiss'],
+            'tension' => $post['tension']);
 
     	$this->db->insert('produits',$data);
 
@@ -86,7 +92,13 @@ class Produit_model extends CI_Model
     		'coloris' =>$post['coloris'],
     		'dimension' =>$post['dimension'],
     		'dispo' => $post['dispo'],
-    		'categorie' => $post['categorie']);
+    		'categorie' => $post['categorie'],
+            'matiere' => $post['matiere'],
+            'nblumiere' => $post['nblumiere'],
+            'ampoule' => $post['ampoule'],
+            'culot' => $post['culot'],
+            'puiss' => $post['puiss'],
+            'tension' => $post['tension']);
 
     	$this->db->where('id', $post['id']);
 		$this->db->update('produits' , $data);
