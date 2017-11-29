@@ -103,6 +103,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="row details_content">
                         <div class="col-md-4">
+                            <h4>Ajustable:</h4> 
+                        </div>   
+                        <div class="col-md-8">
+                            <p><?php echo $detail[0]['ajustable']; ?></p>   
+                        </div> 
+                    </div>
+
+                    <div class="row details_content">
+                        <div class="col-md-4">
                             <h4>Disponibilité:</h4>
                         </div>   
                         <div class="col-md-8">
