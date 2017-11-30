@@ -76,7 +76,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					</div>
 					<div id="collapse-one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-heading-one">
 						<div class="panel-body">
-                            <div class="row" >
+                            <div  id="sortlist" class="row" >
                                 <div class="col-md-12" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
@@ -94,7 +94,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 $n++;
 								 ?>
                                 <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                <div id="test_<?php echo $value['id'];?>" class="sortable_item col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
