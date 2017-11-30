@@ -322,7 +322,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapse-three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-three">
                         <div class="panel-body">
-                            <div class="row" >
+                            <div id="element" class="row" >
                                 <div class="col-md-12" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
@@ -359,7 +359,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
+                                </div>
                                 <!-- fin bloc affichage -->
                                   <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">

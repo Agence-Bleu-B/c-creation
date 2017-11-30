@@ -19,6 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="<?php echo js_url("lity.min") ?>" charset="utf-8"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="<?php echo js_url('admin');?>"></script>
 <?php if ($pagecours == "creation" || $pagecours == 'modifactu' ) {?>
 	<script type="text/javascript" src="<?php echo js_url('tinymce/tinymce.min');?>"></script>
@@ -41,5 +42,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $(this).toggleClass("check");
       });
   });</script>
+  <script type="text/javascript">$(function(){
+
+
+    $('#element').sortable({
+      placeholder: "ui-state-highlight"
+    }); // appel du plugin
+    $( "#element" ).disableSelection();
+
+});</script>
 </body>
 </html>
