@@ -51,10 +51,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                          <input type="text" name="tension" id="tension" /><br />
                          <label for="dispo">dispo</label>
                          <input type="text" name="dispo" id="dispo" /><br />
-                         <label for="style">style</label>
-                         <input type="text" name="style" id="style" /><br />
-                         <label for="ajustable">ajustable</label>
-                         <input type="text" name="ajustable" id="ajustable" /><br />
                          <label for="coloris">coloris</label>
                          <textarea name="coloris" id="coloris"></textarea><br />
                          <label for="dimension">dimensions</label>
@@ -149,10 +145,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -272,10 +264,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br /> 
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -316,7 +304,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="panel-heading" role="tab" id="collapse-heading-three">
                         <h4 class="panel-title">
                             <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-three" aria-expanded="false" aria-controls="collapse-three">
-                                Suspensions
+                                Supensions
                             </a>
                         </h4>
                     </div>
@@ -395,10 +383,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -518,10 +502,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -640,10 +620,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="tension">tension</label>
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
@@ -764,10 +740,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>

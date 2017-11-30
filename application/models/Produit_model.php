@@ -72,9 +72,7 @@ class Produit_model extends CI_Model
             'ampoule' => $post['ampoule'],
             'culot' => $post['culot'],
             'puiss' => $post['puiss'],
-            'tension' => $post['tension'],
-            'style' => $post['style'],
-            'ajustable' => $post['ajustable']);
+            'tension' => $post['tension']);
 
     	$this->db->insert('produits',$data);
 
@@ -100,9 +98,7 @@ class Produit_model extends CI_Model
             'ampoule' => $post['ampoule'],
             'culot' => $post['culot'],
             'puiss' => $post['puiss'],
-            'tension' => $post['tension'],
-            'style' => $post['style'],
-            'ajustable' => $post['ajustable']);
+            'tension' => $post['tension']);
 
     	$this->db->where('id', $post['id']);
 		$this->db->update('produits' , $data);
