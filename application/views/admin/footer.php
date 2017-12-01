@@ -44,9 +44,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   });</script>
   <script type="text/javascript">$(function(){
 
-
     $('#element').sortable({
-      placeholder: "ui-state-highlight"
+      items: "li:not(.dis)"
     }); // appel du plugin
     $( "#element" ).disableSelection();
 
