@@ -45,7 +45,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   <script type="text/javascript">$(function(){
 
     $('#element').sortable({
-      items: "li:not(.dis)"
+      items: "li:not(.dis)",
+      update: function(event, ui) {
+      	alert('test')
+      }
     }); // appel du plugin
     $( "#element" ).disableSelection();
 
