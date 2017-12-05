@@ -323,7 +323,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapse-three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-three">
                         <div class="panel-body row">
-                            <ul style="width: 100%; list-style-type: none; margin: 0;" id="element" >
+                            <ul style="width: 100%; list-style-type: none; margin: 0;" id="suspension" >
                                 <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>

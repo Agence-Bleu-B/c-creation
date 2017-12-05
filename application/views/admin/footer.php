@@ -44,13 +44,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
   });</script>
   <script type="text/javascript">$(function(){
 
-    $('#element').sortable({
+    $('#suspension').sortable({
       items: "li:not(.dis)",
       update: function(event, ui) {
-      	alert('test')
+      	var data = $(this).sortable('serialize');
+      	var data2 = data ;
+      	for(var i = 0;i<data.length;i++){
+      		
+      	}
+      	console.log(data);console.log(data2);
       }
     }); // appel du plugin
-    $( "#element" ).disableSelection();
+    $( "#suspension" ).disableSelection();
 
 });</script>
 </body>
