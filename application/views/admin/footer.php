@@ -48,10 +48,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
       	var data = $(this).sortable('serialize');
-      	var data2 = data ;
-      	for(var i = 0;i<data.length;i++){
-      		
-      	}
+      	
+      	// for(var i = 0;i<data.length;i++){
+      	// 	// $(this).sortable.attr('id','sus_'+i);
+       //    $('#sus_'+i).attr('color', 'white');
+      	// }
+        
+        $(ui.item).each(function(index){
+           $(this).attr('id', 'sus_'+index);
+        });
+        var data2 = $(this).sortable('serialize') ;
       	console.log(data);console.log(data2);
       }
     }); // appel du plugin
