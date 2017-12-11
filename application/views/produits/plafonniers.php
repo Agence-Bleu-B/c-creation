@@ -64,18 +64,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 
             </div>
         </article>
+        
         <!-- Grille nouveautés -->
         <article class="col-md-9">
-            <h2 class="title_nouv"><a href="<?php echo base_url('produits/pieces'); ?>"><i class="fa fa-th-large vignet" aria-hidden="true" ></i></a>Les Pièces Détachées</h2>
+            <h2 class="title_nouv"><a href="<?php echo base_url('produits/appliquesP'); ?>"><i class="fa fa-th vignet" aria-hidden="true" ></i></a>Les Appliques</h2>
              <!-- Produits -->
-         <div class="row">
+        <div class="row">
                 <?php for ($i=0; $i < count($list_prod); $i++) { ?>
                     
-                <div class="col-md-2 product_itemP">
+                <div class="col-md-4 product_item">
                     <h3><?php echo $list_prod[$i]['nom']?></h3>
-                    <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'].'&P';?>">
+                    <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'];?>">
+                        <p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
                         <img class="img-responsive" src=<?php echo img_url('produits/'.$list_prod[$i]['image'])?>>
-                    </a><p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
+                    </a>
                 </div>
                <?php }?>
 
@@ -85,6 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <?php echo $pagination;?>
             </div>
         </div>
+          
           
           
         </article>

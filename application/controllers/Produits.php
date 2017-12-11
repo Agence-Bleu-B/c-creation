@@ -148,6 +148,81 @@ class Produits extends CI_Controller {
 		else{$this->load->view('produits/connexion',$data);}
         $this->load->view('common/footer');
 	}
+
+	public function appliques()
+	{
+		$datahead = array();
+		$datahead['title'] = 'c-creation, des ampoules de qualité';
+		$datahead['description'] = "Découvrez notre gamme d'ampoules de qualité à prix abordable";
+		$data = array();
+		$this->load->library('pagination');
+		$config['base_url']=site_url('produits/appliques'); 
+		$config['total_rows'] = $this->Produit_model->max_ligne('applique');
+		
+		$config['per_page'] = 9;
+		$config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
+		$config['prev_link'] =  '<i class="fa fa-chevron-left" aria-hidden="true"></i>';
+		$config['first_link']="début";
+		$config['last_link']="fin";
+
+		$config['page_query_string'] = TRUE;
+        $config['reuse_query_string'] = TRUE;
+
+        if (!isset($_GET['per_page'])) {
+        	$ppage = 0;
+        }
+        else{
+        	$ppage = $_GET['per_page'];
+        }
+	
+		$data['list_prod']=$this->Produit_model->get_by_cat($ppage,9,'applique');
+		$this->pagination->initialize($config);
+		$data['pagination']=$this->pagination->create_links();
+		$this->load->view('common/header',$datahead);
+        if ($this->isco == true) {
+			$this->load->view('produits/appliques',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
+        $this->load->view('common/footer');
+	}
+
+	public function plafonniers()
+	{
+		$datahead = array();
+		$datahead['title'] = 'c-creation, des ampoules de qualité';
+		$datahead['description'] = "Découvrez notre gamme d'ampoules de qualité à prix abordable";
+		$data = array();
+		$this->load->library('pagination');
+		$config['base_url']=site_url('produits/appliques'); 
+		$config['total_rows'] = $this->Produit_model->max_ligne('plafonnier');
+		
+		$config['per_page'] = 9;
+		$config['next_link'] =  '<i class="fa fa-chevron-right" aria-hidden="true"></i>';
+		$config['prev_link'] =  '<i class="fa fa-chevron-left" aria-hidden="true"></i>';
+		$config['first_link']="début";
+		$config['last_link']="fin";
+
+		$config['page_query_string'] = TRUE;
+        $config['reuse_query_string'] = TRUE;
+
+        if (!isset($_GET['per_page'])) {
+        	$ppage = 0;
+        }
+        else{
+        	$ppage = $_GET['per_page'];
+        }
+	
+		$data['list_prod']=$this->Produit_model->get_by_cat($ppage,9,'plafonnier');
+		$this->pagination->initialize($config);
+		$data['pagination']=$this->pagination->create_links();
+		$this->load->view('common/header',$datahead);
+        if ($this->isco == true) {
+			$this->load->view('produits/plafonniers',$data);
+		}
+		else{$this->load->view('produits/connexion',$data);}
+        $this->load->view('common/footer');
+	}
+
 	public function ampoules()
 	{
 		$datahead = array();

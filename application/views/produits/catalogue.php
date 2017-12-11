@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="row">
+
               <div class="col-md-4">
                 <a href="<?php echo base_url('produits/lampes'); ?>" class="thumbnail">
                   <img src="<?php echo img_url('accordeon/macbook-690276_1280.jpg'); ?>">
@@ -38,24 +39,53 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <h2>suspensions</h2> 
                 </a>
               </div>
-               <div class="col-md-4">
+
+            </div>
+            <div class="row">
+
+
+              
+
+              <div class="col-md-4" >
+                <a href="<?php echo base_url('produits/appliques'); ?>" class="thumbnail" >
+                  <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
+                  <h2>Appliques</h2> 
+                </a>
+              </div>
+
+              <div class="col-md-4" >
+                <a href="<?php echo base_url('produits/plafonniers'); ?>" class="thumbnail" >
+                  <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
+                  <h2>Plafonniers</h2> 
+                </a>
+              </div>
+
+              <div class="col-md-4">
                 <a href="<?php echo base_url('produits/ampoules'); ?>" class="thumbnail">
                   <img src="<?php echo img_url('accordeon/ceiling-lamp-335975_1280.jpg'); ?>">
                   <h2>ampoules</h2> 
                 </a>
               </div>
-               <div class="col-md-4">
+
+            </div>
+            <div class="row">
+
+               
+
+               <div class="col-md-offset-2 col-md-4">
                 <a href="<?php echo base_url('produits/cordons'); ?>" class="thumbnail">
                   <img src="<?php echo img_url('accordeon/lighting-1565982_1920-2.jpg'); ?>">
                   <h2>cordons</h2> 
                 </a>
               </div>
+
                <div class="col-md-4" >
                 <a href="<?php echo base_url('produits/pieces'); ?>" class="thumbnail" >
                   <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
                   <h2>pièces détachées</h2> 
                 </a>
               </div>
+
             </div>
             
             
