@@ -15,7 +15,7 @@ class Produit_model extends CI_Model
 		$result=$this->db->select()
                             ->from('produits')
                             ->where('categorie = '.'"'.$cat.'"')
-                            ->order_by('ref')
+                            ->order_by('ord')
                             ->get()
                             ->result_array();
 		return $result;
