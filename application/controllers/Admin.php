@@ -122,4 +122,16 @@ class Admin extends CI_Controller {
 		$this->load->view('admin/nouveautes',$this->data);
        	$this->load->view('admin/footer');
 	}
+	public function ajaxOrder(){
+		$i=1;
+		foreach ($_POST['list'] as $key => $value) {
+				$data = array(
+	    		'ord' => $i
+	    		);
+
+	    	$this->db->where('ref', $value);
+			$this->db->update('produits' , $data);
+			$i++;
+		}
+	}
 }
