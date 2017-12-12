@@ -48,24 +48,26 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
       	var data = $(this).sortable('serialize');
-        var widget = $(this).sortable( "widget" );
-      	
-      	// for(var i = 0;i<data.length;i++){
-      	// 	// $(this).sortable.attr('id','sus_'+i);
-       //    $('#sus_'+i).attr('color', 'white');
-      	// }
         
-        $(ui.item).each(function(index){
-           $(this).attr('id', 'sus_'+(ui.item.index()));
+        $('#suspension li').each(function(i,index){
+           $(this).attr('id', 'sus_'+i);
+           function pair(i){
+              chiffre=parseInt(i);
+              return ((chiffre & 1)=='0')?true:false;
+            }
+            if(i != 0){
+              if (pair(i) == true) { $(this).css('background', '#BCBCBC');}
+              else{$(this).css('background', '#FFFFFF');}
+            }
         });
 
-        // $($(this).sortable).each(function(i)
-        // {
-        //   alert(i);
-        // })
-
         var data2 = $(this).sortable('serialize') ;
-      	console.log(data);console.log(data2);console.log(widget);
+        var data3 = $(this).sortable('serialize',{ attribute: 'ref'}) ;
+        var data4 = $(this).sortable('toArray',{ attribute: 'ref'}) ;
+        $.each(data4,function(ref){
+          //alert('test'+ref);
+        });
+      	console.log(data);console.log(data2);console.log(data3);console.log(data4);
       }
     }); // appel du plugin
     $( "#suspension" ).disableSelection();

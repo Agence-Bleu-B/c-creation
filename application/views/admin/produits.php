@@ -340,7 +340,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                 <li class="col-md-12  ui-state-default" id="sus_<?php echo $n ;?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="sus_<?php echo $n;?>" ref="<?php echo 'ref_'.$value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
