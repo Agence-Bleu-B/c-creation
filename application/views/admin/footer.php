@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed'); 
+defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
 <!-- /. PAGE WRAPPER  -->
         </div>
@@ -47,8 +47,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     $('#suspension').sortable({
       items: "li:not(.dis)",
       update: function(event, ui) {
-      	var data = $(this).sortable('serialize');
-        
         $('#suspension li').each(function(i,index){
            $(this).attr('id', 'sus_'+i);
            function pair(i){
@@ -60,14 +58,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               else{$(this).css('background', '#FFFFFF');}
             }
         });
-
-        var data2 = $(this).sortable('serialize') ;
-        var data3 = $(this).sortable('serialize',{ attribute: 'ref'}) ;
         var data4 = $(this).sortable('toArray',{ attribute: 'ref'}) ;
-        $.each(data4,function(ref){
-          //alert('test'+ref);
-        });
-      	console.log(data);console.log(data2);console.log(data3);console.log(data4);
+        $.post( "<?php echo site_url('admin/ajaxOrder'); ?>",{ 'list[]': data4});
       }
     }); // appel du plugin
     $( "#suspension" ).disableSelection();
