@@ -47,7 +47,7 @@ class Produit_model extends CI_Model
                             ->from('produits')
                             ->where('categorie = '.'"'.$cat.'"')
                             ->limit($limit,$offset)
-                            ->order_by('ref')
+                            ->order_by('ord')
                             ->get()
                             ->result_array();
     	}
