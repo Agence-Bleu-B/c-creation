@@ -66,6 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               </div>
             </div>
             <div class="panel-group col-md-12" id="collapse" role="tablist" aria-multiselectable="true">
+                <!-- lampes -->
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="collapse-heading-one">
 						<h4 class="panel-title">
@@ -189,6 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
 					</div>
 				</div>
+                <!-- lampadaires -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="collapse-heading-two">
                         <h4 class="panel-title">
@@ -312,7 +314,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                 </div>
-                <!-- test d'ici -->
+                <!-- suspensions -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="collapse-heading-three">
                         <h4 class="panel-title">
@@ -322,8 +324,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </h4>
                     </div>
                     <div id="collapse-three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-three">
-                        <div class="panel-body row">
-                            <ul style="width: 100%; list-style-type: none; margin: 0;" id="suspension" >
+                        <div class="panel-body">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="suspension" >
                                 <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
@@ -424,7 +426,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -443,9 +445,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <!-- fin bloc delete -->
                          <?php } ?>
                     </div>
-
                 </div>
-                <!-- a ici -->
+                <!-- appliques -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="collapse-heading-six">
                         <h4 class="panel-title">
@@ -569,7 +570,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                 </div>
-
+                <!-- plafonniers -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="collapse-heading-six">
                         <h4 class="panel-title">
@@ -693,9 +694,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         </div>
                     </div>
                 </div>
-        
-        
-
+                <!-- ampoules -->
 			  	<div class="panel panel-default">
 			  		<div class="panel-heading" role="tab" id="collapse-heading-four">
 			  			<h4 class="panel-title">
@@ -819,6 +818,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  			</div>
 			  		</div>
 			  	</div>
+                <!-- cordons -->
 			  	<div class="panel panel-default">
 			  		<div class="panel-heading" role="tab" id="collapse-heading-five">
 			  			<h4 class="panel-title" >
@@ -942,6 +942,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			  			</div>
 			  		</div>
 			  	</div>
+                <!-- pieces -->
 			  	<div class="panel panel-default">
 			  		<div class="panel-heading" role="tab" id="collapse-heading-six">
 			  			<h4 class="panel-title">

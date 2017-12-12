@@ -54,8 +54,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               return ((chiffre & 1)=='0')?true:false;
             }
             if(i != 0){
-              if (pair(i) == true) { $(this).css('background', '#BCBCBC');}
-              else{$(this).css('background', '#FFFFFF');}
+              if (pair(i) == true) { $(this).css('background', '#FFFFFF');}
+              else{$(this).css('background', '#BCBCBC');}
             }
         });
         var data4 = $(this).sortable('toArray',{ attribute: 'ref'}) ;
