@@ -58,6 +58,19 @@ class Produit_model extends CI_Model
     	return $req;
     }
 
+    public function major_ord($cat)
+    {
+        $req='SELECT MAX(ord) AS maxord WHERE categorie='.'"'.$cat.'"';
+        /*$req=$this->db->select_max('ord')
+                        ->from('produits')
+                        ->where('categorie = '.'"'.$cat.'"')
+                        ->get()
+                        ->result_array();*/
+
+
+        return $req+1; 
+    }
+
     public function add_prod($post)
     {
     	$data = array(
@@ -74,7 +87,9 @@ class Produit_model extends CI_Model
             'puiss' => $post['puiss'],
             'tension' => $post['tension'],
             'style' => $post['style'],
-            'ajustable' => $post['ajustable']);
+            'ajustable' => $post['ajustable'],
+            'ord' => $this->major_ord($post['categorie']));
+
 
     	$this->db->insert('produits',$data);
 
