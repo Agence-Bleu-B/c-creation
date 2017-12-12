@@ -27,6 +27,11 @@ body {
 .pad-top {
     padding-top:15px;
 }
+
+#enteteClient th
+{
+    text-align: center;
+}
 /*==============================================
     MENU STYLES    
     =============================================*/

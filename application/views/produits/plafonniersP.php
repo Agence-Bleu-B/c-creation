@@ -74,10 +74,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     
                 <div class="col-md-2 product_itemP">
                     <h3><?php echo $list_prod[$i]['nom']?></h3>
-                    <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'];?>">
-                        <p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
+                    <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'].'&P';?>">
+                        
                         <img class="img-responsive" src=<?php echo img_url('produits/'.$list_prod[$i]['image'])?>>
-                    </a>
+                    </a><p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
                 </div>
                <?php }?>
 

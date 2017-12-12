@@ -33,14 +33,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
             <div class="col-md-12" >
             <!-- fin bloc new textes -->
-            <?php 
-            foreach ($clients_liste as $key => $value) { ?>
-                <div class="col-md-2" >
-                    <a href="<?php echo '#'.$value['id'] ;?>" data-lity >
-                        <div class="btn btn-default" style="margin-bottom: 25px;" ><?php echo $value['login']; ?></div>
-                    </a>
-                </div>
-            <?php } ?>
+            <div class="col-md-offset-1 col-md-10">
+                <table class="table table-bordered">
+                    <tr id="enteteClient">
+                        <th>Login</th>
+                        <th>Mot de passe</th>
+                    </tr>
+                    <?php 
+                    foreach ($clients_liste as $key => $value) { ?>
+                    <tr>
+                        
+                            <td><?php echo $value['login']; ?></td><td><?php echo $value['mdp']; ?></td><td><a href="<?php echo '#'.$value['id'] ;?>" data-lity ><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+                        
+                    </tr>
+                    <?php } ?>
+
+                </table>
+            </div>
+            
             </div>
             <?php
             foreach ($clients_liste as $key => $value) { ?>
