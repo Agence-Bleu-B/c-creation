@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#lampe li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'lampe_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#lampadaire li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'lampa_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -87,7 +87,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#applique li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'app_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -105,7 +105,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#plafonnier li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'pla_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -123,7 +123,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#ampoule li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'amp_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -141,7 +141,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#cordon li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'cord_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
@@ -159,7 +159,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       items: "li:not(.dis)",
       update: function(event, ui) {
         $('#piece li').each(function(i,index){
-           $(this).attr('id', 'sus_'+i);
+           $(this).attr('id', 'pie_'+i);
            function pair(i){
               chiffre=parseInt(i);
               return ((chiffre & 1)=='0')?true:false;
