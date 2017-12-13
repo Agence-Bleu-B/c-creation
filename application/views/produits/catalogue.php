@@ -48,14 +48,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
               <div class="col-md-4" >
                 <a href="<?php echo base_url('produits/appliques'); ?>" class="thumbnail" >
-                  <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
+                  <img src="<?php echo img_url('accordeon/Montage11Sans Texte.png'); ?>">
                   <h2>Appliques</h2> 
                 </a>
               </div>
 
               <div class="col-md-4" >
                 <a href="<?php echo base_url('produits/plafonniers'); ?>" class="thumbnail" >
-                  <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720-2.jpg'); ?>">
+                  <img src="<?php echo img_url('accordeon/Montage12Sans Texte.png'); ?>">
                   <h2>Plafonniers</h2> 
                 </a>
               </div>

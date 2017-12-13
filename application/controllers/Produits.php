@@ -152,8 +152,8 @@ class Produits extends CI_Controller {
 	public function appliques()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation, des ampoules de qualité';
-		$datahead['description'] = "Découvrez notre gamme d'ampoules de qualité à prix abordable";
+		$datahead['title'] = 'c-creation, des appliques de qualité';
+		$datahead['description'] = "Nos appliques d'exception apportent une luminosité nouvelle à votre décoration";
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/appliques'); 
@@ -189,8 +189,8 @@ class Produits extends CI_Controller {
 	public function plafonniers()
 	{
 		$datahead = array();
-		$datahead['title'] = 'c-creation, des ampoules de qualité';
-		$datahead['description'] = "Découvrez notre gamme d'ampoules de qualité à prix abordable";
+		$datahead['title'] = 'c-creation, des plafonniers design';
+		$datahead['description'] = "Nos plafonniers d'exception apportent une luminosité nouvelle à votre décoration";
 		$data = array();
 		$this->load->library('pagination');
 		$config['base_url']=site_url('produits/appliques'); 

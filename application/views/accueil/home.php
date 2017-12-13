@@ -31,14 +31,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?php echo base_url('produits/appliques'); ?>" class="accordion-item ">
                     <h2>Appliques</h2>
                     <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720.jpg'); ?>">
+                       <img src="<?php echo img_url('accordeon/Montage11Sans Texte.png'); ?>">
                     </div>
                 </a>
 
                 <a href="<?php echo base_url('produits/plafonniers'); ?>" class="accordion-item ">
                     <h2>Plafonniers</h2>
                     <div class="accordion-item-content">
-                       <img src="<?php echo img_url('accordeon/light-bulbs-1125016_960_720.jpg'); ?>">
+                       <img src="<?php echo img_url('accordeon/Montage12Sans Texte.png'); ?>">
                     </div>
                 </a>
 
