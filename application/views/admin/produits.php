@@ -44,7 +44,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                          <label for="nblumiere">nbre lumières</label>
                          <input type="text" name="nblumiere" id="nblumiere" /><br />
                          <label for="ampoule">ampoule</label>
-                         <input type="text" name="ampoule" id="ampoule" /><br />
+                         <input type="text" name="ampoule" id="ampoules" /><br />
                          <label for="culot">culot</label>
                          <input type="text" name="culot" id="culot" /><br />
                          <label for="puiss">puissance</label>
@@ -155,7 +155,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -289,7 +289,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -423,7 +423,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -557,7 +557,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -691,7 +691,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -825,7 +825,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -959,7 +959,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
@@ -1093,7 +1093,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="nblumiere">nbre lumières</label>
                                              <input type="text" name="nblumiere" id="nblumiere" value="<?php echo $value['nblumiere']; ?>" /><br />
                                              <label for="ampoule">ampoule</label>
-                                             <input type="text" name="ampoule" id="ampoule" value="<?php echo $value['ampoule']; ?>" /><br />
+                                             <input type="text" name="ampoule" id="ampoules" value="<?php echo $value['ampoule']; ?>" /><br />
                                              <label for="culot">culot</label>
                                              <input type="text" name="culot" id="culot" value="<?php echo $value['culot']; ?>" /><br />
                                              <label for="puiss">puissance</label>
