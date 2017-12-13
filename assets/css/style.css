@@ -195,11 +195,14 @@ html,body {
   color: #d77a16;
   float: left;
 }
+.titP{
+  height: 2.1em;
+}
 .product_itemP {
     position: relative;
     /*height: 325px;*/
     overflow: hidden;
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
 
   }
 .product_itemP a {

@@ -70,16 +70,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h2 class="title_nouv"><a href="<?php echo base_url('produits/appliques'); ?>"><i class="fa fa-th-large vignet" aria-hidden="true" ></i></a>Les Appliques</h2>
              <!-- Produits -->
         <div class="row">
-                <?php for ($i=0; $i < count($list_prod); $i++) { ?>
+                <?php for ($i=0; $i < count($list_prod); $i++) { if ($i==0||$i==6||$i==12) {
+                    echo "<div class='row' >";
+                } ?>
                     
                 <div class="col-md-2 product_itemP">
-                    <h3><?php echo $list_prod[$i]['nom']?></h3>
+                    <h3 class="titP"><?php echo $list_prod[$i]['nom']?></h3>
                     <a href="<?php echo base_url('produits/detail').'?ref='.$list_prod[$i]['ref'];?>">
                         
                         <img class="img-responsive" src=<?php echo img_url('produits/'.$list_prod[$i]['image'])?>>
                     </a><p>Ref. <?php echo $list_prod[$i]['ref'];?></p>
                 </div>
-               <?php }?>
+               <?php if ($i==5||$i==11||$i==17) {
+                    echo "</div>";
+                } }?>
 
             </div> 
         <div class="row">
