@@ -36,6 +36,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                              <option value="ampoule">ampoule</option>
                              <option value="cordon">cordon</option>
                              <option value="piece">piece</option>
+                             <option value="applique">applique</option>
+                             <option value="plafonnier">plafonnier</option>
                          </select><br />
                          <label for="matiere">matière</label>
                          <input type="text" name="matiere" id="matiere" /><br />
@@ -68,23 +70,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="panel-group col-md-12" id="collapse" role="tablist" aria-multiselectable="true">
                 <!-- lampes -->
 				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="collapse-heading-one">
-						<h4 class="panel-title">
-							<a role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-one" aria-expanded="true" aria-controls="collapse-one">
-								Lampes
-							</a>
-						</h4>
-					</div>
-					<div id="collapse-one" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapse-heading-one">
-						<div class="panel-body">
-                            <div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                    <div class="panel-heading" role="tab" id="collapse-heading-one">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-one" aria-expanded="false" aria-controls="collapse-one">
+                                Lampes
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-one" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-one">
+                        <div class="panel-body">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="lampe" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listLampes as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -93,9 +95,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     $col = 'white';
                                 }
                                 $n++;
-								 ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 ?>
+                                 <li class="col-md-12  ui-state-default" id="lampe_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -114,9 +115,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listLampes as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -135,6 +147,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -151,9 +165,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -168,7 +182,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -185,11 +199,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-                        </div>
-					</div>
-				</div>
+                         <?php } ?>
+                    </div>
+                </div>
                 <!-- lampadaires -->
                 <div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="collapse-heading-two">
@@ -201,14 +213,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                     <div id="collapse-two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-two">
                         <div class="panel-body">
-                            <div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="lampadaire" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listLampadaires as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -218,8 +230,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="lampa_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -238,9 +249,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listLampadaires as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -259,6 +281,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -271,13 +295,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="puiss">puissance</label>
                                              <input type="text" name="puiss" id="puiss" value="<?php echo $value['puiss']; ?>" /><br />
                                              <label for="tension">tension</label>
-                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br /> 
+                                             <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -292,7 +316,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -309,9 +333,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-                        </div>
+                         <?php } ?>
                     </div>
                 </div>
                 <!-- suspensions -->
@@ -393,6 +415,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -448,23 +472,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </div>
                 <!-- appliques -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="collapse-heading-six">
+                    <div class="panel-heading" role="tab" id="collapse-heading-four">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-six" aria-expanded="false" aria-controls="collapse-six">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-four" aria-expanded="false" aria-controls="collapse-four">
                                 Appliques
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse-six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-six">
+                    <div id="collapse-four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-four">
                         <div class="panel-body">
-                            <div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="applique" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listAppliques as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -474,8 +498,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="app_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -494,9 +517,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listAppliques as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -515,6 +549,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -531,9 +567,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -548,7 +584,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -565,30 +601,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-                        </div>
+                         <?php } ?>
                     </div>
                 </div>
                 <!-- plafonniers -->
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="collapse-heading-six">
+                    <div class="panel-heading" role="tab" id="collapse-heading-five">
                         <h4 class="panel-title">
-                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-six" aria-expanded="false" aria-controls="collapse-six">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-five" aria-expanded="false" aria-controls="collapse-five">
                                 Plafonniers
                             </a>
                         </h4>
                     </div>
-                    <div id="collapse-six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-six">
+                    <div id="collapse-five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-five">
                         <div class="panel-body">
-                            <div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="plafonnier" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listPlafonniers as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -598,8 +632,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="plaf_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -618,9 +651,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listPlafonniers as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -639,6 +683,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -655,9 +701,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -672,7 +718,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -689,30 +735,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-                        </div>
+                         <?php } ?>
                     </div>
                 </div>
                 <!-- ampoules -->
 			  	<div class="panel panel-default">
-			  		<div class="panel-heading" role="tab" id="collapse-heading-four">
-			  			<h4 class="panel-title">
-			  				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-four" aria-expanded="false" aria-controls="collapse-four">
-			  					Ampoules
-			  				</a>
-			  			</h4>
-			  		</div>
-			  		<div id="collapse-four" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-four">
-			  			<div class="panel-body">
-			  				<div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                    <div class="panel-heading" role="tab" id="collapse-heading-six">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-six" aria-expanded="false" aria-controls="collapse-six">
+                                Ampoules
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-six">
+                        <div class="panel-body">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="ampoule" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listAmpoules as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -722,8 +766,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="amp_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -742,9 +785,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listAmpoules as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -763,6 +817,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -779,9 +835,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -796,7 +852,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -813,30 +869,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-			  			</div>
-			  		</div>
-			  	</div>
+                         <?php } ?>
+                    </div>
+                </div>
                 <!-- cordons -->
 			  	<div class="panel panel-default">
-			  		<div class="panel-heading" role="tab" id="collapse-heading-five">
-			  			<h4 class="panel-title" >
-			  				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-five" aria-expanded="false" aria-controls="collapse-five">
-			  					Cordons
-			  				</a>
-			  			</h4>
-			  		</div>
-			  		<div id="collapse-five" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-five">
-			  			<div class="panel-body">
-			  				<div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                    <div class="panel-heading" role="tab" id="collapse-heading-seven">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-seven" aria-expanded="false" aria-controls="collapse-seven">
+                                Cordons
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-seven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-seven">
+                        <div class="panel-body">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="cordon" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
+                                </li>
                                 <?php $n=0; foreach ($listCordons as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
@@ -846,8 +900,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="cord_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -866,9 +919,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listCordons as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -887,6 +951,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -901,11 +967,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="tension">tension</label>
                                              <input type="text" name="tension" id="tension" value="<?php echo $value['tension']; ?>" /><br />
                                              <label for="dispo">dispo</label>
-                                             <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
-                                             <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
+                                             <label for="style">style</label>
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
+                                             <label for="ajustable">ajustable</label>
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -920,7 +986,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -937,31 +1003,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-			  			</div>
-			  		</div>
-			  	</div>
+                         <?php } ?>
+                    </div>
+                </div>
                 <!-- pieces -->
 			  	<div class="panel panel-default">
-			  		<div class="panel-heading" role="tab" id="collapse-heading-six">
-			  			<h4 class="panel-title">
-			  				<a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-six" aria-expanded="false" aria-controls="collapse-six">
-			  					Pièces détachées
-			  				</a>
-			  			</h4>
-			  		</div>
-			  		<div id="collapse-six" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-six">
-			  			<div class="panel-body">
-			  				<div class="row" >
-                                <div class="col-md-12" style="background-color: grey;">
+                    <div class="panel-heading" role="tab" id="collapse-heading-eight">
+                        <h4 class="panel-title">
+                            <a class="collapsed" role="button" data-toggle="collapse" data-parent="#collapse" href="#collapse-eight" aria-expanded="false" aria-controls="collapse-eight">
+                                Pieces détachées
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse-eight" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapse-heading-eight">
+                        <div class="panel-body">
+                            <ul class="col-md-12" style="width: 100%; list-style-type: none; margin: 0;" id="piece" >
+                                <li class="col-md-12 ui-state-default dis" style="background-color: grey;">
                                     <div class="col-md-1">ref</div>
                                     <div class="col-md-2">nom</div>
                                     <div class="col-md-2">dispo</div>
                                     <div class="col-md-1">image</div>
                                     <div class="col-md-2">actions</div>
-                                </div>
-                                <?php $n=0; foreach ($listPiece as $key =>$value){
+                                </li>
+                                <?php $n=0; foreach ($listPieces as $key =>$value){
                                 if($n%2 == 0){
                                     $col = '#bcbcbc';
                                 }
@@ -970,8 +1034,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 }
                                 $n++;
                                  ?>
-                                <!-- debut bloc afficahge -->
-                                <div class="col-md-12" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
+                                 <li class="col-md-12  ui-state-default" id="pie_<?php echo $n;?>" ref="<?php echo $value['ref']; ?>" style="background-color: <?php echo $col; ?> ;margin-top: 5px;">
                                     <div class="col-md-1">
                                         <?php echo $value['ref'];  ?>
                                     </div>
@@ -990,9 +1053,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="col-md-1">
                                         <a href="#delete<?php echo $value['id']; ?>" data-lity ><div class="btn btn-danger" >supprimer</div></a>
                                     </div>
-                                </div> 
-                                <!-- fin bloc affichage -->
-                                  <!--form modif-->
+                                </li>
+                                <?php } ?>
+                            </ul>
+                        </div>
+                        <?php $n=0; foreach ($listPieces as $key =>$value){
+                        if($n%2 == 0){
+                            $col = '#bcbcbc';
+                        }
+                        else{
+                            $col = 'white';
+                        }
+                        $n++;
+                         ?>
+                            <!--form modif-->
                                 <div id="modif<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="width: 80%;overflow: scroll;">
                                   <div class="container-fluid">
                                     <div class="row">
@@ -1011,6 +1085,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                  <option <?php if($value['categorie']=='ampoule'){ echo "selected";} ?> value="ampoule">ampoule</option>
                                                  <option <?php if($value['categorie']=='cordon'){ echo "selected";} ?> value="cordon">cordon</option>
                                                  <option <?php if($value['categorie']=='piece'){ echo "selected";} ?> value="piece">piece</option>
+                                                 <option <?php if($value['categorie']=='applique'){ echo "selected";} ?> value="applique">applique</option>
+                                                 <option <?php if($value['categorie']=='plafonnier'){ echo "selected";} ?> value="plafonnier">plafonnier</option>
                                              </select><br />
                                              <label for="matiere">matière</label>
                                              <input type="text" name="matiere" id="matiere" value="<?php echo $value['matiere']; ?>" /><br />
@@ -1027,9 +1103,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                              <label for="dispo">dispo</label>
                                              <input type="text" name="dispo" id="dispo" value="<?php echo $value['dispo']; ?>" /><br />
                                              <label for="style">style</label>
-                                             <input type="text" name="style" id="style" /><br />
+                                             <input type="text" name="style" id="style" value="<?php echo $value['style']; ?>" /><br />
                                              <label for="ajustable">ajustable</label>
-                                             <input type="text" name="ajustable" id="ajustable" /><br />
+                                             <input type="text" name="ajustable" id="ajustable" value="<?php echo $value['ajustable']; ?>" /><br />
                                              <label for="coloris">coloris</label>
                                              <textarea name="coloris" id="coloris"><?php echo $value['coloris']; ?></textarea><br />
                                              <label for="dimension">dimensions</label>
@@ -1044,7 +1120,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <div id="image<?php echo $value['id']; ?>" class="col-md-12 jumbotron lity-hide" style="margin-left: 30px;margin-right: 100px;width: 80%;border-radius: 10px;">
                                   <!-- form photo -->
                                   <form method="post" action="" enctype="multipart/form-data" >
-                                    <img src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
+                                    <img class="responsive" style="max-width: 250px;" src="<?php echo base_url()."assets/images/produits/".$value["image"] ; ?>">
                                     <div><?php echo $value['image']; ?></div>
                                     <input type="hidden" name="id" value="<?php echo $value['id']; ?>">
                                     <input type="file" name="photo">
@@ -1061,11 +1137,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                   </form>
                                 </div>
                                 <!-- fin bloc delete -->
-                                <?php } ?>
-                            </div>
-			  			</div>
-			  		</div>
-			  	</div>
+                         <?php } ?>
+                    </div>
+                </div>
             </div>
       	</div>
       	<!-- /. contenu  -->

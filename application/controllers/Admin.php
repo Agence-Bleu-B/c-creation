@@ -68,10 +68,10 @@ class Admin extends CI_Controller {
 		$this->data2['listLampadaires']= $this->produit_model->get_cat('lampadaire');
 		$this->data2['listSuspensions']= $this->produit_model->get_cat('suspension');
 		$this->data2['listAppliques']=$this->produit_model->get_cat('applique');
-		$this->data2['listSuspensions']=$this->produit_model->get_cat('suspension');
+		$this->data2['listPlafonniers']=$this->produit_model->get_cat('plafonnier');
 		$this->data2['listAmpoules']= $this->produit_model->get_cat('ampoule');
 		$this->data2['listCordons']= $this->produit_model->get_cat('cordon');
-		$this->data2['listPiece']= $this->produit_model->get_cat('piece');
+		$this->data2['listPieces']= $this->produit_model->get_cat('piece');
 
 		$this->load->view('admin/header',$this->data);
 		$this->load->view('admin/produits',$this->data2);
